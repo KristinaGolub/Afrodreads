@@ -15,7 +15,12 @@
     <meta property="og:image" content="" />
     <meta property="og:type" content="website" />
 
-    <link rel="stylesheet" href="style.css">
+    <!--Собственные стили-->
+    <link rel="stylesheet" href="/resources/style.css">
+    <!--Шрифты Inter и Comfortaa-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=basic&lazy=true"></script>
 </head>
 
@@ -27,7 +32,7 @@
                     <div class="header__item">
                         <!--меню-->
                         <div class="menu"> 
-                            <a class="menu__btn"></a> <!--бургер-->
+                            <a class="menu__burger"></a> <!--бургер-->
                             <nav class="menu__nav">
                                 <a class="menu__nav__btn" href="#cover">Главная</a>
                                 <a class="menu__nav__btn" href="#services">Услуги</a>
@@ -38,7 +43,11 @@
                         </div>
                     </div>
                     <div class="header__item">
-                        <a class="logo"><span class="logo logo-small">Afrodreads</span></a>
+                        <a class="logo">
+                            <div class="logo logo-small">
+                                <img src="/images/afrodreads-logo.svg" alt="logo">
+                            </div>
+                        </a>
                     </div>
                     <div class="header__item">
                         <div>

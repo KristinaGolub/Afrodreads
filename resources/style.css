@@ -1,0 +1,51 @@
+/*Общие стили (начало)*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container {
+    max-width: 1290px;
+    margin: 0 auto;
+
+}
+/*Общие стили (конец)*/
+
+
+
+/*Header (начало)*/
+.header {
+    height: 82px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__nav__btn {
+    text-decoration: none; 
+    color: #9281A5;
+}
+/*Header (конец)*/
+
+
+
+.content {
+    flex: 1 0 auto;
+}
+
+
+/*Footer (начало)*/
+.footer {
+    flex: 0 0 auto;
+}
+/*Footer (конец)*/
