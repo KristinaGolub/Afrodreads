@@ -19,6 +19,25 @@ a {
     text-decoration: none;
 }
 
+
+.btn {
+    width: 250px;
+    height: 60px;
+    border-radius: 5px;
+    padding: 0.8em 1.8em;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    border:none;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    background-color: #E96E9A;
+}
+
+.hidden {
+    display: none;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -37,7 +56,8 @@ a {
 /*Header (начало)*/
 header {
     background-color: #F2F2F2;
-
+    position: fixed;
+    width: 100%;
 }
 .header {
     height: 82px;
@@ -102,6 +122,19 @@ header {
     color: #9281A5;
     font-size: 20px;
 }
+
+
+@media (max-width:992px) {
+    .container {
+        padding: 10px;
+    }
+    .menu__nav {
+        display: none;
+    }
+    .menu__burger {
+        display: block;
+    }
+}
 /*Header (конец)*/
 
 
@@ -109,6 +142,67 @@ header {
 .content {
     flex: 1 0 auto;
 }
+
+
+
+.cover {
+    height: 100%;
+    background-color: #9281A5;
+}
+.cover__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cover__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.cover__content> * {
+    padding-bottom: 5em;
+}
+
+.cover__title,
+.cover__who,
+.cover__tagline {
+    margin-bottom: 0.5em;
+    font-family: 'Comfortaa';
+    /* text-transform: uppercase; */
+}
+
+.cover__title {
+    font-size: 40px;
+    color: #F2F2F2;
+}
+
+.cover__who {
+    font-size: 30px;
+    color: #F2F2F2;
+}
+
+.cover__tagline {
+    font-size: 35px;
+    color: #df72a7;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.cover__location {
+    display: flex;
+    align-items: center;
+}
+
+.cover__location> * {
+    margin-right: 1em;
+}
+
+.address {
+    font-style: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
 
 
 /*Footer (начало)*/
