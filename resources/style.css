@@ -1,14 +1,21 @@
 /*Общие стили (начало)*/
+@font-face {
+    font-family: BeautifulBloom; /* Имя шрифта */
+    src: url(/resources/fonts/TTF/BeautifulBloom-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Comfortaa', cursive;
-    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
 }
 
 html,
 body {
     height: 100%;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Inter', sans-serif;
 }
 
 li {
@@ -45,10 +52,11 @@ a {
 }
 
 .container {
+    padding: 0 10px;
     max-width: 1290px;
     margin: 0 auto;
-
 }
+
 /*Общие стили (конец)*/
 
 
@@ -58,6 +66,7 @@ header {
     background-color: #F2F2F2;
     position: fixed;
     width: 100%;
+    z-index: 999;
 }
 .header {
     height: 82px;
@@ -69,40 +78,42 @@ header {
 .menu__nav {
     display: flex;
     flex-direction: row;
+    gap: 25px;
     font-size: 14px;
-}
-
-.menu__nav> .menu__nav__btn+.menu__nav__btn {
-    margin-left: 25px;
 }
 
 .menu__nav__btn {
     color: #9281A5;
 }
 
+
+.logo{
+    font-family: BeautifulBloom;
+    color: #E96E9A;
+}
+
 .logo-small {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 55px;
+}
+
+.logo-big {
+    text-align: center;
+    font-size: 120px;
+    display: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* width: 100%; */
 }
 
 .header__contacts {
     display: flex;
+    gap: 20px;
     flex-direction: row;
-}
-
-.header__contacts> .header__contacts__item+.header__contacts__item 
-{
-  margin-left: 20px;
 }
 
 .social-networks {
     display: flex;
+    gap: 20px;
     flex-direction: row; 
-}
-
-.social-networks> li+li {
-    margin-left: 20px;
 }
 
 .social-network__link {
@@ -124,10 +135,8 @@ header {
 }
 
 
-@media (max-width:992px) {
-    .container {
-        padding: 10px;
-    }
+@media (max-width: 1440px){
+    
     .menu__nav {
         display: none;
     }
@@ -135,55 +144,111 @@ header {
         display: block;
     }
 }
+
+@media (max-width: 834px){
+
+    .cover__title {
+        font-size: 30px;
+    }
+    
+    .cover__who {
+        font-size: 20px;
+    }
+    
+    .cover__tagline {
+        font-size: 25px;
+    }
+
+    .logo-small{
+        display: none;
+    }
+
+    .logo-big{
+        display: block;
+    }
+
+    .cover__image{
+        display: none;
+    }
+
+    .container {
+        padding: 0 5px;
+    }
+}
+
 /*Header (конец)*/
 
 
 
 .content {
+    margin-top: 82px;
     flex: 1 0 auto;
 }
 
-
-
 .cover {
-    height: 100%;
     background-color: #9281A5;
 }
+
+
 .cover__container {
-    display: flex;
-    justify-content: space-between;
+    height: calc(100vh - 82px);
+    position: relative;
+    /* display: flex; */
+}
+
+.cover__image {
+    /* flex: 1 0 auto; */
+    /* height: 100%; */
+    /* position: relative; */
+    /* position: absolute; */
+
+    /* right: 0; */
+    /* bottom: 0; */
+    /* max-width: 50%; */
+}
+
+.cover__image > img{
+    margin: 0;
+    max-height: calc(97vh - 82px);
+    min-height: calc(80vh - 82px);
+    height: 95%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0; 
 }
 
 .cover__content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    margin-top: auto;
+    bottom: 0;
 }
-.cover__content> * {
+
+/* .cover__content> * {
     padding-bottom: 5em;
-}
+} */
 
 .cover__title,
 .cover__who,
 .cover__tagline {
     margin-bottom: 0.5em;
+    
+    color: #F2F2F2;
     font-family: 'Comfortaa';
     /* text-transform: uppercase; */
 }
 
 .cover__title {
+    /* margin-top: 32vh; */
     font-size: 40px;
-    color: #F2F2F2;
 }
 
 .cover__who {
     font-size: 30px;
-    color: #F2F2F2;
 }
 
 .cover__tagline {
+    
     font-size: 35px;
-    color: #df72a7;
     font-style: italic;
     font-weight: 700;
 }
@@ -203,6 +268,17 @@ header {
     color: #FFFFFF;
 }
 
+
+
+/*Contacts (начало)*/
+
+
+.map {
+    display: none;
+    width: 658px;
+    height: 352px;
+}
+/*Contacts (конец)*/
 
 
 /*Footer (начало)*/

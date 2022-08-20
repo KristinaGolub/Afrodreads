@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
+<headv>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Afrodreads - дреды длинною в жизнь!</title>
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
+<!-- 
+    <link type="image/x-icon" rel="shortcut icon" href="/resources/favicon.ico">
+    <link type="image/png" sizes="16x16" rel="icon" href="/resources/favicon-16x16.png">
+    <link type="image/png" sizes="32x32" rel="icon" href="/resources/favicon-32x32.png">
+    <link type="image/png" sizes="96x96" rel="icon" href="/resources/favicon-96x96.png">
+    <link type="image/png" sizes="120x120" rel="icon" href="/resources/favicon-120x120.png">
+    <link type="image/png" sizes="192x192" rel="icon" href="/resources/android-icon-192x192.png">
+
+    <link sizes="57x57" rel="apple-touch-icon" href="/resources/apple-touch-icon-57x57.png">
+    <link sizes="60x60" rel="apple-touch-icon" href="/resources/apple-touch-icon-60x60.png">
+    <link sizes="72x72" rel="apple-touch-icon" href="/resources/apple-touch-icon-72x72.png">
+    <link sizes="76x76" rel="apple-touch-icon" href="/resources/apple-touch-icon-76x76.png">
+    <link sizes="114x114" rel="apple-touch-icon" href="/resources/apple-touch-icon-114x114.png">
+    <link sizes="120x120" rel="apple-touch-icon" href="/resources/apple-touch-icon-120x120.png">
+    <link sizes="144x144" rel="apple-touch-icon" href="/resources/apple-touch-icon-144x144.png">
+    <link sizes="152x152" rel="apple-touch-icon" href="/resources/apple-touch-icon-152x152.png">
+    <link sizes="180x180" rel="apple-touch-icon" href="/resources/apple-touch-icon-180x180.png">
+
+    <link color="#e52037" rel="mask-icon" href="/resources/safari-pinned-tab.svg">
+
+    <meta name="msapplication-TileColor" content="#E5E5E5">
+    <meta name="msapplication-TileImage" content="/resources/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/resources/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/resources/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/resources/mstile-310x310.png">
+    <meta name="msapplication-square310x310logo" content="/resources/mstile-310x150.png">
+    <meta name="application-name" content="Afrodreads">
+    <meta name="msapplication-config" content="/resources/browserconfig.xml">
+
+    <link rel="manifest" href="/resources/icon/manifest.json">
+    <meta name="theme-color" content="#E5E5E5"> -->
+
+
+
+
+
+
+    
     <meta property="og:title" content="" />
     <meta property="og:url" content="" />
     <meta property="og:description" content="" />
@@ -20,7 +57,9 @@
     <!--Шрифты Inter и Comfortaa-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=basic&lazy=true"></script>
 </head>
 
@@ -31,10 +70,11 @@
                 <div class="header">
                     <div class="header__item">
                         <!--меню-->
-                        <div class="menu"> 
+                        <div class="menu">
                             <a class="menu__burger hidden">
                                 <img src="/resources/menu-burger.svg" alt="">
-                            </a> <!--бургер-->
+                            </a>
+                            <!--бургер-->
                             <nav class="menu__nav">
                                 <a class="menu__nav__btn" href="#cover">Главная</a>
                                 <a class="menu__nav__btn" href="#services">Услуги</a>
@@ -46,9 +86,10 @@
                     </div>
                     <div class="header__item">
                         <a class="logo">
-                            <div class="logo logo-small">
-                                <img src="/resources/afrodreads-logo.svg" alt="logo">
-                            </div>
+                            <span class="logo logo-small">
+                                Afrodreads
+                                <!-- <img src="/resources/afrodreads-logo.svg" alt="logo"> -->
+                            </span>
                         </a>
                     </div>
                     <div class="header__item">
@@ -93,10 +134,8 @@
                 <div class="container">
                     <div class="cover__container">
                         <div class="cover__content">
+                            <span class="logo logo-big">Afrodreads</span>
                             <div>
-                                <!-- <div class="logo logo-big">
-                                    <img src="/resources/afrodreads-logo.svg" alt="logo">
-                                </div> -->
                                 <h1 class="cover__title">Дреды афрокосы брейды</h1>
                                 <p class="cover__who">Студия брендинга в Москве</p>
                                 <p class="cover__tagline">Плетём дреды длинною в жизнь</p>
@@ -116,7 +155,7 @@
                 </div>
             </section>
 
-            <section id="services">
+            <section  id="services">
                 <div class="container">
                     <h2>Выбери свой стиль</h2>
                     <p>Дреды, Косы, Стрижка и Окрашивание</p>
@@ -134,22 +173,26 @@
                         </article>
                         <article class="services__list__item">
                             <p class="services__list__item__name">Натуральные дреды</p>
-                            <img src="/resources/services/natural-braids.jpg" alt="" class="services__list__item__photo">
+                            <img src="/resources/services/natural-braids.jpg" alt=""
+                                class="services__list__item__photo">
                             <a href="#" class="btn services__list__item__btn">Подробнее</a>
                         </article>
                         <article class="services__list__item">
                             <p class="services__list__item__name">Классические афрокосы</p>
-                            <img src="/resources/services/classic-afro-braids.jpg" alt="" class="services__list__item__photo">
+                            <img src="/resources/services/classic-afro-braids.jpg" alt=""
+                                class="services__list__item__photo">
                             <a href="#" class="btn services__list__item__btn">Подробнее</a>
                         </article>
                         <article class="services__list__item">
                             <p class="services__list__item__name">Афронаращивание</p>
-                            <img src="/resources/services/afro-extension.jpg" alt="" class="services__list__item__photo">
+                            <img src="/resources/services/afro-extension.jpg" alt=""
+                                class="services__list__item__photo">
                             <a href="#" class="btn services__list__item__btn">Подробнее</a>
                         </article>
                         <article class="services__list__item">
                             <p class="services__list__item__name">Креативное окрашивание</p>
-                            <img src="/resources/services/creative-coloring.jpg" alt="" class="services__list__item__photo">
+                            <img src="/resources/services/creative-coloring.jpg" alt=""
+                                class="services__list__item__photo">
                             <a href="#" class="btn services__list__item__btn">Подробнее</a>
                         </article>
                         <article class="services__list__item">
@@ -159,12 +202,15 @@
                         </article>
                         <article class="services__list__item">
                             <p class="services__list__item__name">Афрокудри/дредокудри</p>
-                            <img src="/resources/services/afro-curls_dread-curls.jpg" alt="Афрокудри/Дредокудри - вплетение в свои волосы кудрявого канекалона" class="services__list__item__photo">
+                            <img src="/resources/services/afro-curls_dread-curls.jpg"
+                                alt="Афрокудри/Дредокудри - вплетение в свои волосы кудрявого канекалона"
+                                class="services__list__item__photo">
                             <a href="" class="btn services__list__item__btn"></a>
                         </article>
                         <article class="services__list__item">
                             <p class="services__list__item__name">Афрозатылки</p>
-                            <img src="/resources/services/afro-nape.jpg" alt="Афрозатылок – афрокосички в зоне затылка" class="services__list__item__photo">
+                            <img src="/resources/services/afro-nape.jpg" alt="Афрозатылок – афрокосички в зоне затылка"
+                                class="services__list__item__photo">
                             <a href="#" class="btn services__list__item__btn">Подробнее</a>
                         </article>
                     </div>

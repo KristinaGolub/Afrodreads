@@ -1,0 +1,13 @@
+CACHE MANIFEST
+#В данной секции перечислены файлы, которые будут кэшированы
+index.html
+
+NETWORK
+#Здесь перечислены файлы, которые требуют подключение к интернету
+login-page.php
+
+FALLBACK
+#Если mob.html недоступен пользователь будет перенаправлен на offline.html
+/mob.html /offline.html
+#Если какой-либо из HTML файлов недоступен пользователь будет перенаправлен на offline.html
+*.html /offline.html

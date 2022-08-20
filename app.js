@@ -7,12 +7,24 @@ var certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
 
 var credentials = { key: privateKey, cert: certificate };
 var express = require('express');
+const { response } = require('express');
 var app = express();
 
 app.use("/resources", express.static(__dirname + "/resources"));
 
-app.use("/", function (request, response) {
+app.get("/index.appcache", (request, response) => {
+    response.setHeader("Content-Type", "text/cache-manifest")
+    response.sendFile(__dirname + "/index.appcache")
+})
+
+app.get("/", function (request, response) {
     response.sendFile(__dirname + "/index.html");
+});
+
+
+app.get('*', function(request, response){
+    response.status(404);
+    response.sendFile(__dirname + "/not-found.html");
 });
 
 var httpServer = http.createServer(app);
