@@ -54,12 +54,12 @@
 
     <!--Собственные стили-->
     <link rel="stylesheet" href="/resources/style.css">
-    <!--Шрифты Inter и Comfortaa-->
+    <!--Шрифты Roboto и Montserrat-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+
+
     <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=basic&lazy=true"></script>
 </head>
 
@@ -132,86 +132,70 @@
         <main class="content">
             <section class="cover" id="cover">
                 <div class="container">
-                    <div class="cover__container">
-                        <div class="cover__content">
-                            <span class="logo logo-big">Afrodreads</span>
-                            <div>
-                                <h1 class="cover__title">Дреды афрокосы брейды</h1>
-                                <p class="cover__who">Студия брендинга в Москве</p>
-                                <p class="cover__tagline">Плетём дреды длинною в жизнь</p>
-                            </div>
-                            <div>
-                                <a class="btn cover__enroll" href="#">Записаться</a>
-                            </div>
-                            <div class="cover__location">
-                                <img src="/resources/geo-location.png" alt="Geo Location">
-                                <address class="address cover__address">г. Москва, ул. Сущевский вал 43</address>
-                            </div>
-                        </div>
-                        <div class="cover__image">
-                            <img src="/resources/entry-girl-img.png" alt="Обложка. Девушка с разноцветными дредами">
-                        </div>
+                    <div class="cover-content">
+                        <h1 class="cover-title">Afrodreads</h1>
+                        <p class="cover-subtitle">Студия брейдинга</p>
+                        <a type="buttons" class="button cover-btn">Получить бесплатную консультацию</a>
                     </div>
                 </div>
             </section>
 
-            <section  id="services">
+
+            <section class="hello" id="hello">
+                <div class="container">
+                    <div>Хочешь качественного преображения?</div>
+                    <div>Значит ты попал по адресу. Наши специалисты готовы помочь подобрать тот вариант плетения, который подойдёт именно тебе!</div>
+                </div>
+            </section>
+
+            <section  class="services" id="services">
                 <div class="container">
                     <h2>Выбери свой стиль</h2>
-                    <p>Дреды, Косы, Стрижка и Окрашивание</p>
-                    <p>Здесь можно выбрать услуги предоставляемые нашей студией</p>
                     <div class="services__list">
                         <article class="services__list__item">
-                            <p class="services__list__item__name">Де дреды/де косы</p>
-                            <img src="/resources/services/dreads.jpg" alt="" class="services__list__item__photo">
-                            <a href="#" class="btn services__list__item__btn">Подробнее</a>
+                            <img src="/resources/cover.JPG" alt="" class="services__list__item__photo">
+                            <div class="services__list__item__text">
+                                <p class="services__list__item__name">Де дреды/де косы</p>
+                                <p class="services__list__item__discription"></p>
+                            </div>
                         </article>
                         <article class="services__list__item">
+                            <img src="/resources/cover.JPG" alt="" class="services__list__item__photo">
                             <p class="services__list__item__name">Брейды</p>
-                            <img src="/resources/services/braids.jpg" alt="" class="services__list__item__photo">
-                            <a href="#" class="btn services__list__item__btn">Подробнее</a>
                         </article>
                         <article class="services__list__item">
+                            <img src="/resources/cover.JPG" alt=""
+                                class="services__list__item__photo">
                             <p class="services__list__item__name">Натуральные дреды</p>
-                            <img src="/resources/services/natural-braids.jpg" alt=""
-                                class="services__list__item__photo">
-                            <a href="#" class="btn services__list__item__btn">Подробнее</a>
                         </article>
                         <article class="services__list__item">
+                            <img src="/resources/cover.JPG" alt=""
+                                class="services__list__item__photo">
                             <p class="services__list__item__name">Классические афрокосы</p>
-                            <img src="/resources/services/classic-afro-braids.jpg" alt=""
-                                class="services__list__item__photo">
-                            <a href="#" class="btn services__list__item__btn">Подробнее</a>
                         </article>
                         <article class="services__list__item">
+                            <img src="/resources/cover.JPG" alt=""
+                                class="services__list__item__photo">
                             <p class="services__list__item__name">Афронаращивание</p>
-                            <img src="/resources/services/afro-extension.jpg" alt=""
-                                class="services__list__item__photo">
-                            <a href="#" class="btn services__list__item__btn">Подробнее</a>
                         </article>
                         <article class="services__list__item">
+                            <img src="/resources/cover.JPG" alt=""
+                                class="services__list__item__photo">
                             <p class="services__list__item__name">Креативное окрашивание</p>
-                            <img src="/resources/services/creative-coloring.jpg" alt=""
-                                class="services__list__item__photo">
-                            <a href="#" class="btn services__list__item__btn">Подробнее</a>
                         </article>
                         <article class="services__list__item">
+                            <img src="/resources/cover.JPG" alt="" class="services__list__item__photo">
                             <p class="services__list__item__name">Стрижки</p>
-                            <img src="/resources/services/haircuts.jpg" alt="" class="services__list__item__photo">
-                            <a href="#" class="btn services__list__item__btn">Подробнее</a>
                         </article>
                         <article class="services__list__item">
-                            <p class="services__list__item__name">Афрокудри/дредокудри</p>
-                            <img src="/resources/services/afro-curls_dread-curls.jpg"
+                            <img src="/resources/cover.JPG"
                                 alt="Афрокудри/Дредокудри - вплетение в свои волосы кудрявого канекалона"
                                 class="services__list__item__photo">
-                            <a href="" class="btn services__list__item__btn"></a>
+                            <p class="services__list__item__name">Афрокудри/дредокудри</p>
                         </article>
                         <article class="services__list__item">
+                            <img src="/resources/cover.JPG" alt="Афрозатылок – афрокосички в зоне затылка" class="services__list__item__photo">
                             <p class="services__list__item__name">Афрозатылки</p>
-                            <img src="/resources/services/afro-nape.jpg" alt="Афрозатылок – афрокосички в зоне затылка"
-                                class="services__list__item__photo">
-                            <a href="#" class="btn services__list__item__btn">Подробнее</a>
                         </article>
                     </div>
                 </div>
@@ -249,6 +233,63 @@
 
         <footer class="footer">
             <div class="container">
+
+                <div class="footer-content">
+                    <div class="footer-contacts">
+                        <div class="social-networks">
+                            <a href="#"><img class="social-network-item" src="/resources/social_networks/vk.svg" alt=""></a>
+                            <a href="#"><img class="social-network-item" src="/resources/social_networks/telegram.svg" alt=""></a>
+                            <a href="#"><img class="social-network-item" src="/resources/social_networks/whatsapp.svg" alt=""></a>
+                            <a href="#"><img class="social-network-item" src="./resources/social_networks/instagram.svg" alt=""></a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="footer-phone">
+                                    <img src="/resources/phone-icon.svg" alt="">
+                                    <span>7(777)777-7777</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="footer-geolocation">
+                                    <img src="/resources/geo-location.png" alt="">
+                                    <span>г. Москва ул. Сущевский вал 43</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-logo">
+                        <a class="logo">
+                            <span class="logo logo-small">
+                                Afrodreads
+                            </span>
+                        </a>
+                    </div>
+                    <div class="footer-navigation">
+                        <div class="footer-navigation-section">
+                            <div>
+                                <a href="#">Главная</a>
+                            </div>
+                            <div>
+                                <a href="#">Услуги</a>
+                            </div>
+                            <div>
+                                <a href="#">Мастера</a>
+                            </div>
+                        </div>
+                        <div class="footer-navigation-section">
+                            <div>
+                                <a href="#">Уход</a>
+                            </div>
+                            <div>
+                                <a href="#">Контакты</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </footer>
     </div>
