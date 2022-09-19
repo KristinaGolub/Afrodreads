@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<headv>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Afrodreads - дреды длинною в жизнь!</title>
 
-<!-- 
+    <!-- 
     <link type="image/x-icon" rel="shortcut icon" href="/resources/favicon.ico">
     <link type="image/png" sizes="16x16" rel="icon" href="/resources/favicon-16x16.png">
     <link type="image/png" sizes="32x32" rel="icon" href="/resources/favicon-32x32.png">
@@ -45,7 +45,7 @@
 
 
 
-    
+
     <meta property="og:title" content="" />
     <meta property="og:url" content="" />
     <meta property="og:description" content="" />
@@ -59,10 +59,26 @@
     <!--Шрифты Roboto и Montserrat-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap"
+        rel="stylesheet">
 
 
-    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=basic&lazy=true"></script>
+    <!--Подключение библиотек Bootstrap-->
+    <script src="/resources/libs/jquery/jquery-3.5.1.min.js"></script>
+    <script src="/resources/libs/bootstrap/js/bootstrap.js"></script>
+
+
+    <!--Подключение карты Map-->
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=basic&skin=light&lazy=true"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
+
+    <!--Подключение собственных скриптов-->
+    <script src="/resources/script.js"></script>
 </head>
 
 <body>
@@ -71,23 +87,21 @@
         <header class="header">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
-                    <div class="">
-                        <!--меню-->
-                        <div class="menu">
-                            <a class="menu__burger d-none">
-                                <img src="/resources/menu-burger.svg" alt="">
-                            </a>
-                            <!--бургер-->
-                            <nav class="menu__nav">
-                                <a class="menu__nav__btn" href="#cover">Главная</a>
-                                <a class="menu__nav__btn" href="#services">Услуги</a>
-                                <a class="menu__nav__btn" href="#masters">Мастера</a>
-                                <a class="menu__nav__btn" href="#care">Уход</a>
-                                <a class="menu__nav__btn" href="#contacts">Контакты</a>
-                            </nav>
-                        </div>
+                    <!--меню-->
+                    <div class="menu">
+                        <a class="menu__burger d-none">
+                            <img src="/resources/menu-burger.svg" alt="">
+                        </a>
+                        <!--бургер-->
+                        <nav class="menu__nav">
+                            <a class="mr-2" href="#cover">Главная</a>
+                            <a class="mr-2" href="#services">Услуги</a>
+                            <a class="mr-2" href="#masters">Мастера</a>
+                            <a class="mr-2" href="#care">Уход</a>
+                            <a class="mr-2" href="#contacts">Контакты</a>
+                        </nav>
                     </div>
-                    <div class="">
+                    <div>
                         <a class="logo">
                             <span class="logo logo-small">
                                 Afrodreads
@@ -95,219 +109,450 @@
                         </a>
                     </div>
                     <div class="d-flex  align-items-center">
-                        <div class="">
+                        <div class="mr-5">
                             <a class="phone-link" href="tel:+79774904101">+7&nbsp(977)&nbsp490&nbsp41&nbsp01</a>
                         </div>
                         <ul class="d-flex list-unstyled list-inline m-0 align-items-center">
                             <li class="list-inline-item">
-                                <a class="social-network__link" href="#" rel="noopener" target="_blank">
-                                    <img alt="Мы Вконтакте" src="/resources/social_networks/vk.svg">
+                                <a class="social-network__link d-flex align-items-center" href="#" rel="noopener"
+                                    target="_blank">
+                                    <img alt="Мы Вконтакте" src="/resources/images/social_networks/vk.svg">
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="social-network__link" href="#" rel="noopener" target="_blank">
-                                    <img alt="Мы в Telegram" src="/resources/social_networks/telegram.svg">
+                                <a class="social-network__link d-flex align-items-center" href="#" rel="noopener"
+                                    target="_blank">
+                                    <img alt="Мы в Telegram" src="/resources/images/social_networks/telegram.svg">
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="social-network__link" href="#" rel="noopener" target="_blank">
-                                    <img alt="Мы в Whatsapp" src="/resources/social_networks/whatsapp.svg">
+                                <a class="social-network__link d-flex align-items-center" href="#" rel="noopener"
+                                    target="_blank">
+                                    <img alt="Мы в Whatsapp" src="/resources/images/social_networks/whatsapp.svg">
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="social-network__link" href="#" rel="noopener" target="_blank">
-                                    <img alt="Мы в Instagram" src="/resources/social_networks/instagram.svg">
+                                <a class="social-network__link d-flex align-items-center" href="#" rel="noopener"
+                                    target="_blank">
+                                    <img alt="Мы в Instagram" src="/resources/images/social_networks/instagram.svg">
                                 </a>
                             </li>
                         </ul>
                     </div>
-    
+
                 </div>
-    
-                
-    
             </div>
         </header>
-    
+
         <main class="content">
             <section class="cover" id="cover">
-                <div class="container">
-                    <div class="cover-content">
-                        <h1 class="cover-title">Afrodreads</h1>
-                        <p class="cover-subtitle">Студия брейдинга</p>
-                        <a type="buttons" class="button cover-btn">Получить бесплатную консультацию</a>
-                    </div>
+                <div class="container d-flex flex-column align-items-center justify-content-center h-100">
+                    <h1 class="cover-title">Afrodreads</h1>
+                    <p class="cover-subtitle align-self-end">Студия брейдинга</p>
+                    <a type="buttons"
+                        class="button cover-btn d-flex justify-content-center  text-center px-3 py-1 mt-5">Получить
+                        бесплатную консультацию</a>
                 </div>
             </section>
-    
-    
+
+
             <section class="hello" id="hello">
                 <div class="container">
                     <div>Хочешь качественного преображения?</div>
-                    <div>Значит ты попал по адресу. Наши специалисты готовы помочь подобрать тот вариант плетения, который подойдёт именно тебе!</div>
+                    <div>Значит ты попал по адресу. Наши специалисты готовы помочь подобрать тот вариант плетения,
+                        который подойдёт именно тебе!</div>
                 </div>
             </section>
-    
-            <section  class="services" id="services">
+
+            <section class="services py-5" id="services">
                 <div class="container">
-                    <h2>Выбери свой стиль</h2>
-                    <div class="services__list">
-                        <article class="services__list__item">
-                            <img src="/resources/cover.JPG" alt="" class="services__list__item__photo">
-                            <div class="services__list__item__text">
-                                <p class="services__list__item__name">Де дреды/де косы</p>
-                                <p class="services__list__item__discription"></p>
-                            </div>
-                        </article>
-                        <article class="services__list__item">
-                            <img src="/resources/cover.JPG" alt="" class="services__list__item__photo">
-                            <p class="services__list__item__name">Брейды</p>
-                        </article>
-                        <article class="services__list__item">
-                            <img src="/resources/cover.JPG" alt=""
-                                class="services__list__item__photo">
-                            <p class="services__list__item__name">Натуральные дреды</p>
-                        </article>
-                        <article class="services__list__item">
-                            <img src="/resources/cover.JPG" alt=""
-                                class="services__list__item__photo">
-                            <p class="services__list__item__name">Классические афрокосы</p>
-                        </article>
-                        <article class="services__list__item">
-                            <img src="/resources/cover.JPG" alt=""
-                                class="services__list__item__photo">
-                            <p class="services__list__item__name">Афронаращивание</p>
-                        </article>
-                        <article class="services__list__item">
-                            <img src="/resources/cover.JPG" alt=""
-                                class="services__list__item__photo">
-                            <p class="services__list__item__name">Креативное окрашивание</p>
-                        </article>
-                        <article class="services__list__item">
-                            <img src="/resources/cover.JPG" alt="" class="services__list__item__photo">
-                            <p class="services__list__item__name">Стрижки</p>
-                        </article>
-                        <article class="services__list__item">
-                            <img src="/resources/cover.JPG"
-                                alt="Афрокудри/Дредокудри - вплетение в свои волосы кудрявого канекалона"
-                                class="services__list__item__photo">
-                            <p class="services__list__item__name">Афрокудри/дредокудри</p>
-                        </article>
-                        <article class="services__list__item">
-                            <img src="/resources/cover.JPG" alt="Афрозатылок – афрокосички в зоне затылка" class="services__list__item__photo">
-                            <p class="services__list__item__name">Афрозатылки</p>
-                        </article>
+                    <h2 class="py-3">Выбери свой стиль</h2>
+
+                    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-1">
+                        <div class="col px-1 py-3">
+                            <article class="service-content">
+                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <div class="service-text d-flex justify-content-between align-items-center p-3">
+                                    <p class="services-name">Де(се) дреды/де(се) косы</p>
+                                    <p class="services-price">от&nbsp8500р</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col px-1 py-3">
+                            <article class="service-content">
+                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <div class="service-text d-flex justify-content-between align-items-center p-3">
+                                    <p class="services-name">Брейды</p>
+                                    <p class="services-price">от&nbsp1000р</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col px-1 py-3">
+                            <article class="service-content">
+                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <div class="service-text d-flex justify-content-between align-items-center p-3">
+                                    <p class="services-name">Натуральные дреды</p>
+                                    <p class="services-price">от&nbsp5000р</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col px-1 py-3">
+                            <article class="service-content">
+                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <div class="service-text d-flex justify-content-between align-items-center p-3">
+                                    <p class="services-name">Классические афрокосы/Box braids</p>
+                                    <p class="services-price">от&nbsp6000р</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col px-1 py-3">
+                            <article class="service-content">
+                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <div class="service-text d-flex justify-content-between align-items-center p-3">
+                                    <p class="services-name">Афронаращивание</p>
+                                    <p class="services-price">от&nbsp3500р</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col px-1 py-3">
+                            <article class="service-content">
+                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <div class="service-text d-flex justify-content-between align-items-center p-3">
+                                    <p class="services-name">Афрокудри/дредокудри</p>
+                                    <p class="services-price">от&nbsp8000р</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col px-1 py-3">
+                            <article class="service-content">
+                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <div class="service-text d-flex justify-content-between align-items-center p-3">
+                                    <p class="services-name">Афрозатылки</p>
+                                    <p class="services-price">от&nbsp3800р</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col px-1 py-3">
+                            <article class="service-content">
+                                <img src="/resources/images/services-photos/cover.JPG"
+                                    alt="Афрокудри/Дредокудри - вплетение в свои волосы кудрявого канекалона"
+                                    class="img-fluid">
+                                <div class="service-text d-flex justify-content-between align-items-center p-3">
+                                    <p class="services-name">Вплетение готовых комплектов</p>
+                                    <p class="services-price">от&nbsp1500р</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col px-1 py-3">
+                            <article class="service-content">
+                                <img src="/resources/images/services-photos/cover.JPG"
+                                    alt="Афрозатылок – афрокосички в зоне затылка" class="img-fluid">
+                                <div class="service-text d-flex justify-content-between align-items-center p-3">
+                                    <p class="services-name">Расплетение и уход</p>
+                                    <p class="services-price">от&nbsp3500р</p>
+                                </div>
+                            </article>
+                        </div>
+
                     </div>
+
+
+
+
                 </div>
             </section>
-    
+
             <section id="masters">
                 <div class="container">
-    
+
                 </div>
             </section>
-    
-            <section id="care">
+
+            <section id="care" class="care py-5">
                 <div class="container">
-    
-                </div>
-            </section>
-    
-            <section id="contacts">
-                <div class="container">
-                    <div class="contacts__content">
-                        <div>
-    
+                    <h2 class="py-3">Часто задаваемые вопросы</h2>
+                    <div>
+                        <div class="care-question px-3 mb-3">
+                            <a class="d-flex justify-content-between align-items-center" type="button" href="#"
+                                data-collapse-for="answer-1">
+                                <p class="p-0"> 1. Как подготовиться к заплетению?</p>
+                                <img src="/resources/images/care-icon.svg" alt="">
+                            </a>
+                            <div class="answer px-5 pb-5" id="answer-1">
+                                Важно помыть голову за 7-8 часов перед плетением (можно перед сном). Приветствуется
+                                использование пилинга для кожи головы.
+                                В последнее мытьё перед сеансом кондиционеры/маски/бальзамы минимизируем либо
+                                исключаем вовсе (если волосы осветлённые или сухие, небольшое количество допустимо).
+                            </div>
                         </div>
-    
-                        <div>
-    
-                            <div id="map" class="map"></div>
+                        <div class="care-question px-3 mb-3">
+                            <a class="d-flex justify-content-between align-items-center" type="button" href="#"
+                                data-collapse-for="answer-2">
+                                <p class="p-0"> 2. Как подготовиться к заплетению натуральных дредов?</p>
+                                <img src="/resources/images/care-icon.svg" alt="">
+                            </a>
+                            <div class="answer px-5 pb-5" id="answer-2">
+                                Важно помыть голову за 7-8 часов перед плетением (можно перед сном). Приветствуется
+                                использование пилинга для кожи головы.
+                                Маски/кондиционеры/бальзамы исключаем во время последнего мытья!
+                            </div>
+                        </div>
+                        <div class="care-question px-3 mb-3">
+                            <a class="d-flex justify-content-between align-items-center" type="button" href="#"
+                                data-collapse-for="answer-3">
+                                <p class="p-0"> 3. Могут ли быть противопоказания к плетению?</p>
+                                <img src="/resources/images/care-icon.svg" alt="">
+                            </a>
+                            <div class="answer px-5 pb-5" id="answer-3">
+                                Противопоказания к плетению могут быть следующие:
+                                -свежие незажившие раны на коже головы;
+                                -педикулез (вши);
+                                -себорея,прогрессирующий псориаз, экзема, сильный дерматит, сильная перхоть;
+                                -активное выпадение волос или частичное облысение;
+                                -частые головные боли и обостренная форма вегето-сосудистой системы.
+                                *в период беременности противопоказаний к плетению нету в случае, если нет проблемы
+                                с активным выпадением волос.
+                            </div>
+                        </div>
+                        <div class="care-question px-3 mb-3">
+                            <a class="d-flex justify-content-between align-items-center" type="button" href="#"
+                                data-collapse-for="answer-4">
+                                <p class="p-0"> 4. В каких случаях плестись лучше с осторожностью? </p>
+                                <img src="/resources/images/care-icon.svg" alt="">
+                            </a>
+                            <div class="answer px-5 pb-5" id="answer-4">
+                                Осветлённые сухие концы, химия, бустап, ботокс, хна.
+                                Этой категории людей мы рекомендуем расплетаться непосредственно у мастера, так как
+                                волосы могут быть подвержены бОльшей ломкости и, при самостоятельном, расплетание
+                                можно их повредить.
+                                Так же для этой категории могут подойти не все виды плетения.
+                            </div>
+                        </div>
+                        <div class="care-question px-3 mb-3">
+                            <a class="d-flex justify-content-between align-items-center" type="button" href="#"
+                                data-collapse-for="answer-5">
+                                <p class="p-0"> 5. Как избежать возникновения раздражения и бороться с дискомфортом?
+                                </p>
+                                <img src="/resources/images/care-icon.svg" alt="">
+                            </a>
+                            <div class="answer px-5 pb-5" id="answer-5">
+                                Первые 3-5 дней являются адаптационным периодом после заплетения. Зуд, тяжесть и
+                                стянутые ощущения являются нормой в этот промежуток времени. Не рекомендуется честь
+                                голову грязными руками, делать тугие и высокие причёски в этот период. Для
+                                облегчения дискомфорта можно использовать специализированную косметику, снимающую
+                                зуд и имеющую антибактериальный эффект (приобрести можно в студии).
+                            </div>
+                        </div>
+                        <div class="care-question px-3 mb-3">
+                            <a class="d-flex justify-content-between align-items-center" type="button" href="#"
+                                data-collapse-for="answer-6">
+                                <p class="p-0"> 6. Как мыть голову? </p>
+                                <img src="/resources/images/care-icon.svg" alt="">
+                            </a>
+                            <div class="answer px-5 pb-5" id="answer-6">
+                                Мыть голову рекомендуется раз в 7-10 дней (можно чаще или реже по мере
+                                комфортности).
+                                *При более частом мытье причёска будет быстрее терять свой исходный вид.
+                                Моем привычным шампунем, вспенив его губкой или в бутылке, разбавив с водой.
+                                Основная задача промывать кожу головы, так же приветствуется использование пилингов
+                                (подойдут кислотные), длину можно промывать остатками моющего средства.
+                                Бальзамы/кондиционеры/маски исключаем. Остатки шампуня важно тщательно промывать
+                                проточной водой!
+                                Голову мыть только в вертикальном положении, стоя под душем или лёжа в ванной, но но
+                                в коем случае не запрокидывая сверху вниз!
+                            </div>
+                        </div>
+                        <div class="care-question px-3 mb-3">
+                            <a class="d-flex justify-content-between align-items-center" type="button" href="#"
+                                data-collapse-for="answer-7">
+                                <p class="p-0"> 7. Можно ли расплестись самостоятельно? </p>
+                                <img src="/resources/images/care-icon.svg" alt="">
+                            </a>
+                            <div class="answer px-5 pb-5" id="answer-7">
+                                Несложные причёски, типо брейдов можно расплести без труда самим. Более сложные,
+                                такие как, де дреды, каркасные плетения, афрозатылки, в первый раз мы рекомендуем
+                                расплетать в студии. Наши мастера покажут, в какой последовательности это лучше
+                                делать, чтоб не навредить волосам.
+                            </div>
+                        </div>
+                        <div class="care-question px-3 mb-3">
+                            <a class="d-flex justify-content-between align-items-center" type="button" href="#"
+                                data-collapse-for="answer-8">
+                                <p class="p-0"> 8. Как мыть афрозатылки?</p>
+                                <img src="/resources/images/care-icon.svg" alt="">
+                            </a>
+                            <div class="answer px-5 pb-5" id="answer-8">
+                                Афрозатылок- это частичное плетение.
+                                Отделяем его от незаплетенной части волос и волосистую зону моем в душе, закидывая
+                                голову вниз и используя привычные моющие средства. Сам затылок можно мыть раз в 7-10
+                                дней вместе с основным мытьем головы. Тщательно моем именно кожу головы (шампунем,
+                                предварительно его вспенив), однако на затылок не используем кондиционеры/бальзамы и
+                                маски, следим за тем, чтоб эта зона хорошо промывалась проточной водой (всю голову с
+                                затылком можно мыть уже стоя вертикально в душе, либо лёжа в ванной).
+                            </div>
+                        </div>
+                        <div class="care-question  px-3 mb-3">
+                            <a class="d-flex justify-content-between align-items-center" type="button" href="#"
+                                data-collapse-for="answer-9">
+                                <p class="p-0"> 9. В каких случаях мастер оставляет за собой право отказать в
+                                    процедуре?</p>
+                                <img src="/resources/images/care-icon.svg" alt="">
+                            </a>
+                            <div class="answer px-5 pb-5" id="answer-9">
+                                В случае, если у вас имеются противопоказания и вы не сообщили о них ранее.
+                                Запрещено приходить на сеанс в состоянии алкогольного или наркотического опьянения.
+                                При опоздании на сеанс более чем на 20 минут запись так же может быть отменена, если
+                                за вами стоит следующий клиент.
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-    
-    
+
+            <section id="contacts" class="contacts">
+                <div class="container py-5">
+                    <h2 class="py-3">Наши контакты</h2>
+                    <div class="contacts-description py-5">
+                        Наша студия брейдинга находится в Москве в 5 минутах от м. Марьина роща.
+                        Мы сделали все для комфортного времяпрепровождения наших гостей.
+                        Стремимся не только к качественной работе наших мастеров, но и к хорошему сервису.
+                    </div>
+                    <div>
+                        <img class="w-100 img-fluid p-0" src="/resources/images/contacts-img.png" alt="">
+                    </div>
+
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <div class="contact-name">Телефон:</div>
+                                <div class="d-flex flex-row align-items-center">
+                                    <img class="contacts-phone-img" src="/resources/images/phone-img-dark.svg" alt="">
+                                    <div class="contact-data">7(777)777-7777</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="contact-name">E-mail:</div>
+                                <div class="contact-data">afrodreds@gmail.com</div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="contact-name">Социальные сети:</div>
+                            <div class="social-networks">
+                                <a href="#"><img class="" src="/resources/images/social_networks/vk-dark.svg" alt=""></a>
+                                <a href="#"><img class="" src="/resources/images/social_networks/telegram-dark.svg" alt=""></a>
+                                <a href="#"><img class="" src="/resources/images/social_networks/whatsapp-dark.svg" alt=""></a>
+                                <a href="#"><img class="" src="./resources/images/social_networks/instagram-dark.svg" alt=""></a>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div id="map" class="map">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+           
+            </section>
+
+
         </main>
-    
-        <footer class="footer">
-            <div class="container">
-    
-                <div class="footer-content">
-                    <div class="footer-contacts">
-                        <div class="social-networks">
-                            <a href="#"><img class="social-network-item" src="/resources/social_networks/vk.svg" alt=""></a>
-                            <a href="#"><img class="social-network-item" src="/resources/social_networks/telegram.svg" alt=""></a>
-                            <a href="#"><img class="social-network-item" src="/resources/social_networks/whatsapp.svg" alt=""></a>
-                            <a href="#"><img class="social-network-item" src="./resources/social_networks/instagram.svg" alt=""></a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <div class="footer-phone">
-                                    <img src="/resources/phone-icon.svg" alt="">
-                                    <span>7(777)777-7777</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <div class="footer-geolocation">
-                                    <img src="/resources/geo-location.png" alt="">
-                                    <span>г. Москва ул. Сущевский вал 43</span>
-                                </div>
-                            </a>
-                        </div>
+
+    <footer class="footer py-5">
+        <div class="container">
+
+            <div class="footer-content row row justify-content-between">
+                <div class="footer-contacts col-4 row justify-content-between flex-column">
+                    <div class="social-networks">
+                        <a href="#"><img class="" src="/resources/images/social_networks/vk.svg" alt=""></a>
+                        <a href="#"><img class="" src="/resources/images/social_networks/telegram.svg" alt=""></a>
+                        <a href="#"><img class="" src="/resources/images/social_networks/whatsapp.svg" alt=""></a>
+                        <a href="#"><img class="" src="./resources/images/social_networks/instagram.svg" alt=""></a>
                     </div>
-                    <div class="footer-logo">
-                        <a class="logo">
-                            <span class="logo logo-small">
-                                Afrodreads
-                            </span>
+                    <div>
+                        <a href="#">
+                            <div class="footer-phone">
+                                <img src="/resources/images/phone-icon.svg" alt="">
+                                <span>7(777)777-7777</span>
+                            </div>
                         </a>
                     </div>
-                    <div class="footer-navigation">
-                        <div class="footer-navigation-section">
-                            <div>
-                                <a href="#">Главная</a>
+                    <div>
+                        <a href="#">
+                            <div class="footer-geolocation">
+                                <img src="/resources/images/geo-location.png" alt="">
+                                <span>г. Москва ул. Сущевский вал 43</span>
                             </div>
-                            <div>
-                                <a href="#">Услуги</a>
-                            </div>
-                            <div>
-                                <a href="#">Мастера</a>
-                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-logo col-4">
+                    <a class="logo">
+                        <span class="logo logo-small">
+                            Afrodreads
+                        </span>
+                    </a>
+                </div>
+                <div class="footer-navigation col-4 row justify-content-between">
+                    <div class="col-6">
+                        <div>
+                            <a href="#">Главная</a>
                         </div>
-                        <div class="footer-navigation-section">
-                            <div>
-                                <a href="#">Уход</a>
-                            </div>
-                            <div>
-                                <a href="#">Контакты</a>
-                            </div>
+                        <div>
+                            <a href="#">Услуги</a>
+                        </div>
+                        <div>
+                            <a href="#">Мастера</a>
                         </div>
                     </div>
-    
+                    <div class="col-6">
+                        <div>
+                            <a href="#">Уход</a>
+                        </div>
+                        <div>
+                            <a href="#">Контакты</a>
+                        </div>
+                    </div>
                 </div>
-    
+
             </div>
-        </footer>
+
+        </div>
+    </footer>
     </div>
-    
 
 
-    <script src="/resources/libs/jquery/jquery-3.5.1.min.js"></script>
-    <script src="/resources/libs/bootstrap/js/bootstrap.js"></script>
+
+
 
     <script type="text/javascript">
+        // new DGWidgetLoader({ 
+        //     "width": 640, 
+        //     "height": 600, 
+        //     "borderColor": "#a3a3a3", 
+        //     "pos": { "lat": 55.793875056082285, "lon": 37.60911941528321, "zoom": 16 }, 
+        //     "opt": { "city": "moscow" }, 
+        //     "org": [{ "id": "70000001046603879" }] });
+
+
+
+
         var map;
         DG.then(function () {
             map = DG.map('map', {
-                center: [55.793335, 37.612619],
-                zoom: 16
+                center: [55.793875056082285, 37.61311941528321],
+                zoom: 16,
+                fullscreenControl: false,
+                zoomControl: false,
             });
 
-            DG.marker([55.793335, 37.612619]).addTo(map).bindPopup('Вы кликнули по мне!');
+            // DG.showFirm('141265770712989')
+            // map.showFirm('141265770712989')
+
+            DG.marker([55.793615, 37.609297]).addTo(map).bindPopup('Брейд-студия Afrodreads!');
         });
     </script>
 </body>

@@ -34,7 +34,7 @@ const validatePhone = (value) => {
 
 
 
-// app run
+// app run (начало)
 $(document).ready(function ($) {
     $('#callrequest').submit(submitHandler);
     $('input[name="phone-number"]').mask('+7 (000) 000 0000');
@@ -78,3 +78,4 @@ function SetValidationStatus(prop, validationInfo) {
     $(`span[data-error-for='${prop}']`).text(validationInfo.message);
 }
 
+// app run (конец)

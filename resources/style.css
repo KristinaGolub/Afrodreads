@@ -10,12 +10,15 @@ body {
     margin: 0;
 }
 
-.wrapper {
-
+p {
+    margin: 0;
 }
 
-
-
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
 .btn {
     width: 250px;
@@ -30,9 +33,6 @@ body {
     color: #FFFFFF;
     background-color: #E96E9A;
 }
-
-
-
 /*Общие стили (конец)*/
 
 
@@ -40,22 +40,18 @@ body {
 /*Header (начало)*/
 .header {
     background-color: #383838;
-
-
 }
 
 .menu__nav {
-   
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     letter-spacing: 5%;
 }
 
-.menu__nav__btn {
+.menu__nav a {
     color: #ffffff;
 }
-
 
 .logo{
     font-family: BeautifulBloom;
@@ -70,54 +66,35 @@ body {
     text-align: center;
     font-size: 120px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    /* width: 100%; */
 }
-
 
 .phone-link {
     font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
 }
-
-
 
 .social-network__link {
     width: 24px;
     height: 24px;
-
-}
-
-
-
-.phone-link{
-    color: #ffffff;
-    font-size: 20px;
 }
 /*Header (конец)*/
 
 
 
 .content {
-    margin-top: 82px;
     flex: 1 0 auto;
 }
 
 
+
+/*Cover (начало)*/
 .cover {
-    background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65) ), url('/resources/cover_791x495.JPG');
+    background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65) ), url('/resources/images/cover_791x495.JPG');
     background-size:cover;
     background-position: 50% 0%;
     height: calc(100vh - 82px) ;
-    
 }
-
-.cover .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-
 
 .cover-title{
     font-family: 'Montserrat', sans-serif;
@@ -138,81 +115,165 @@ body {
     color: #CB0E7F;
 }
 
-
 .cover-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 3px solid #FFFFFF;
     border-radius: 10px;
     color: #FFFFFF;
-    text-align: center;
     font-size: 20px;
-    /* width: 300px; */
     height: 50px;
-    padding: 1em;
-
 }
+/*Cover (конец)*/
 
 
 
+/*Hello (начало)*/
 .hello {
     text-align: center;
     font-size: 24px;
     font-family: 'Comfortaa', cursive;
     line-height: 30px;
     color: #383838;
+    padding: 5em 0
+}
+/*Hello (конец)*/
+
+
+
+/*Services (начало)*/
+.services {
+    background-color: #383838;
+    text-align: center;
 }
 
-
-.services__list__item__photo {
-    width: 100%;
-
+.services h2 {
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 40px;
 }
 
-.services__list__item__text {
+.service-content {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.service-text{
     background-color: #383838;
     color: #ffffff;
-
+   height: 120px;
 }
+
+.services-name,
+.services-price {
+    font-family: 'Roboto Condensed';
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.services-name {
+    font-size: 24px;
+    text-align: left;
+}
+.services-price {
+    font-size: 30px;
+}
+/*Services (конец)*/
+
+
+
+/*Care (начало)*/
+.care {
+    text-align: center;
+}
+.care h2 {
+    color: #383838;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 40px;
+}
+.care-question {
+    border: 1px solid #383838;
+    border-radius: 3px;
+}
+
+.care-question>a {
+    height: 64px;
+}
+
+.care-question p{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 24px;
+    color: #383838;
+}
+
+.answer {
+    text-align: start;
+}
+/*Care (конец)*/
 
 
 
 /*Contacts (начало)*/
+/* .contacts {
+} */
+
+.contacts h2 {
+    text-align: center;
+    color: #383838;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.contacts-description {
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #383838;
+}
+
 .map {
-    display: none;
-    width: 658px;
+    /* height: 100%; */
+    /* display: none; */
+    /* width: 658px;*/
     height: 352px;
+}
+
+.contacts-phone-img {
+    width: 20px;
+    height: 22px;
+}
+
+.contact-name,
+.contact-data {
+    font-family: 'Roboto';
+    font-size: 24px;
+    color: #383838;
+} 
+
+.contact-name {
+    font-weight: 600;
+}
+.contact-data {
+    font-weight: 400;
 }
 /*Contacts (конец)*/
 
 
+
 /*Footer (начало)*/
 .footer {
-
     background-color: #383838;
-
 }
-
 
 .footer-content a {
     color: #ffffff;
 }
 
-
-
 .footer-contacts {
-
     font-family: 'Roboto', sans-serif;
 }
-
-
-
-
-
-
-
-
 
 .footer-navigation a {
     font-family: 'Montserrat', sans-serif;
