@@ -45,7 +45,25 @@ $(document).ready(function ($) {
     $('input[name="phone-number"]').focusout(function() {
         SetValidationStatus("phone-number", validatePhone($(this).val()));
     })
+
+    $(".js-question-btn").click(collapseAccordion)
 });
+
+
+function collapseAccordion(){
+    const id = $(this).attr("data-collapse-for");
+    
+    const elem = $(`#${id}`);
+    var attr = elem.attr("closed");
+    if(typeof attr !== 'undefined' && attr !== false)
+    {
+        elem.removeAttr('closed');
+    }
+    else
+    {
+        elem.attr('closed', '')
+    }
+}
 
 
 function submitHandler(event) {
