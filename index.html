@@ -149,7 +149,7 @@
                 <div class="container d-flex flex-column align-items-center justify-content-center h-100">
                     <h1 class="cover-title">Afrodreads</h1>
                     <p class="cover-subtitle align-self-end">Студия брейдинга</p>
-                    <a type="buttons"
+                    <a type="button"
                         class="button cover-btn d-flex justify-content-center  text-center px-3 py-1 mt-5">Получить
                         бесплатную консультацию</a>
                 </div>
@@ -159,22 +159,23 @@
             <section class="hello" id="hello">
                 <div class="container">
                     <div>Хочешь качественного преображения?</div>
-                    <div>Значит ты попал по адресу. Наши специалисты готовы помочь подобрать тот вариант плетения,
-                        который подойдёт именно тебе!</div>
+                    <div>Значит ты попал по адресу. Наши специалисты готовы помочь подобрать тот вариант плетения, который подойдёт именно тебе!</div>
                 </div>
             </section>
 
             <section class="services py-5" id="services">
-                <div class="container">
-                    <h2 class="py-3">Выбери свой стиль</h2>
+                <div class="container-xl">
+                    <h2 class="main-title py-3">Выбери свой стиль</h2>
 
-                    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-1">
+                    <div class="row row-cols-md-3 row-cols-1">
                         <div class="col px-1 py-3">
                             <article class="service-content">
                                 <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
-                                <div class="service-text d-flex justify-content-between align-items-center p-3">
-                                    <p class="services-name">Де(се) дреды/де(се) косы</p>
-                                    <p class="services-price">от&nbsp8500р</p>
+                                <div class="service-text p-3">
+                                    <p class="services-name">
+                                        <p class="services-name">Де(се) дреды/де(се) косы</p>
+                                        <p class="services-price">от&nbsp8500р</p>
+                                    </p>
                                 </div>
                             </article>
                         </div>
@@ -266,7 +267,56 @@
 
             <section id="masters">
                 <div class="container">
+                    <h2 class="py-3">Наши мастера</h2>
 
+
+                    <div id="masters_carousel" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe atque iusto optio nisi
+                                adipisci! Earum doloremque expedita delectus minima voluptatum repudiandae, commodi
+                                numquam, fugiat aliquid soluta dolores molestiae impedit autem.
+                            </div>
+                            <div class="carousel-item">
+                                ждбьт
+                            </div>
+                            <div class="carousel-item">
+                                ьтпимап
+                            </div>
+                        </div>
+
+                        <br><br><br>
+                        <div>
+
+                            
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#masters_carousel" data-bs-slide="prev">Prev</button>
+                                <button type="button" data-bs-target="#masters_carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">1</button>
+                                <button type="button" data-bs-target="#masters_carousel" data-bs-slide-to="1" aria-label="Slide 2">2</button>
+                                <button type="button" data-bs-target="#masters_carousel" data-bs-slide-to="2" aria-label="Slide 3">3</button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#masters_carousel" data-bs-slide="next">Next</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <script>
+                        var myCarousel = document.querySelector('#masters_carousel')
+                        var carousel = new bootstrap.Carousel(myCarousel)
+                    </script>
+
+
+
+                    <!-- <div>
+                        <p>Мастер Ольга</p>
+                        <p>Опыт работы: 5 лет</p>
+                        <p>Ольга- наш «менеджер по вайбу». Она точно не даст заскучать и ты даже не заметишь, как пролетит сеанс, ведь обычно это происходит не только увлекательно, но и быстро!  
+                        Специализируется на изготовлении и вплетении де дредов и де кос, так же практикует брейды. Единственный мастер в нашей команде, который работает так же с креативными окрашиваниями и стрижками.</p>
+                        <a href="#" type="button"
+                        class="button text-center px-3 py-1 mt-5">Записаться</a>
+                    </div> -->
                 </div>
             </section>
 
@@ -274,38 +324,45 @@
                 <div class="container">
                     <h2 class="py-3">Часто задаваемые вопросы</h2>
                     <div>
-                        <div class="care-question px-3 mb-3">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn" type="button" href="#"
-                                data-collapse-for="answer-1">
-                                <p class="p-0"> 1. Как подготовиться к заплетению?</p>
-                                <img src="/resources/images/care-icon.svg" alt="">
+                        <div class="care-question">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn"
+                                type="button" data-collapse-for="answer-1">
+                                <p class="text-left"> 1. Как подготовиться к заплетению?</p>
+                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
+                                </svg>
+
                             </a>
-                            <div class="answer px-5 pb-5" id="answer-1">
+                            <div class="answer p-5" id="answer-1" closed>
                                 Важно помыть голову за 7-8 часов перед плетением (можно перед сном). Приветствуется
                                 использование пилинга для кожи головы.
                                 В последнее мытьё перед сеансом кондиционеры/маски/бальзамы минимизируем либо
                                 исключаем вовсе (если волосы осветлённые или сухие, небольшое количество допустимо).
                             </div>
                         </div>
-                        <div class="care-question px-3 mb-3">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn" type="button" href="#"
-                                data-collapse-for="answer-2">
-                                <p class="p-0"> 2. Как подготовиться к заплетению натуральных дредов?</p>
-                                <img src="/resources/images/care-icon.svg" alt="">
+                        <div class="care-question">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn"
+                                type="button" data-collapse-for="answer-2">
+                                <p class="text-left"> 2. Как подготовиться к заплетению натуральных дредов?</p>
+                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
+                                </svg>
                             </a>
-                            <div class="answer px-5 pb-5" id="answer-2">
+                            <div class="answer p-5" id="answer-2" closed>
                                 Важно помыть голову за 7-8 часов перед плетением (можно перед сном). Приветствуется
                                 использование пилинга для кожи головы.
                                 Маски/кондиционеры/бальзамы исключаем во время последнего мытья!
                             </div>
                         </div>
-                        <div class="care-question px-3 mb-3">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn" type="button" href="#"
-                                data-collapse-for="answer-3">
-                                <p class="p-0"> 3. Могут ли быть противопоказания к плетению?</p>
-                                <img src="/resources/images/care-icon.svg" alt="">
+                        <div class="care-question">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn"
+                                type="button" data-collapse-for="answer-3">
+                                <p class="text-left"> 3. Могут ли быть противопоказания к плетению?</p>
+                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
+                                </svg>
                             </a>
-                            <div class="answer px-5 pb-5" id="answer-3">
+                            <div class="answer p-5" id="answer-3" closed>
                                 Противопоказания к плетению могут быть следующие:
                                 -свежие незажившие раны на коже головы;
                                 -педикулез (вши);
@@ -316,13 +373,15 @@
                                 с активным выпадением волос.
                             </div>
                         </div>
-                        <div class="care-question px-3 mb-3">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn" type="button" href="#"
-                                data-collapse-for="answer-4">
-                                <p class="p-0"> 4. В каких случаях плестись лучше с осторожностью? </p>
-                                <img src="/resources/images/care-icon.svg" alt="">
+                        <div class="care-question">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn"
+                                type="button" data-collapse-for="answer-4">
+                                <p class="text-left"> 4. В каких случаях плестись лучше с осторожностью? </p>
+                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
+                                </svg>
                             </a>
-                            <div class="answer px-5 pb-5" id="answer-4">
+                            <div class="answer p-5" id="answer-4" closed>
                                 Осветлённые сухие концы, химия, бустап, ботокс, хна.
                                 Этой категории людей мы рекомендуем расплетаться непосредственно у мастера, так как
                                 волосы могут быть подвержены бОльшей ломкости и, при самостоятельном, расплетание
@@ -330,14 +389,17 @@
                                 Так же для этой категории могут подойти не все виды плетения.
                             </div>
                         </div>
-                        <div class="care-question px-3 mb-3">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn" type="button" href="#"
-                                data-collapse-for="answer-5">
-                                <p class="p-0"> 5. Как избежать возникновения раздражения и бороться с дискомфортом?
+                        <div class="care-question">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn"
+                                type="button" data-collapse-for="answer-5">
+                                <p class="text-left"> 5. Как избежать возникновения раздражения и бороться с
+                                    дискомфортом?
                                 </p>
-                                <img src="/resources/images/care-icon.svg" alt="">
+                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
+                                </svg>
                             </a>
-                            <div class="answer px-5 pb-5" id="answer-5">
+                            <div class="answer p-5" id="answer-5" closed>
                                 Первые 3-5 дней являются адаптационным периодом после заплетения. Зуд, тяжесть и
                                 стянутые ощущения являются нормой в этот промежуток времени. Не рекомендуется честь
                                 голову грязными руками, делать тугие и высокие причёски в этот период. Для
@@ -345,13 +407,15 @@
                                 зуд и имеющую антибактериальный эффект (приобрести можно в студии).
                             </div>
                         </div>
-                        <div class="care-question px-3 mb-3">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn" type="button" href="#"
-                                data-collapse-for="answer-6">
-                                <p class="p-0"> 6. Как мыть голову? </p>
-                                <img src="/resources/images/care-icon.svg" alt="">
+                        <div class="care-question">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn"
+                                type="button" data-collapse-for="answer-6">
+                                <p class="text-left"> 6. Как мыть голову? </p>
+                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
+                                </svg>
                             </a>
-                            <div class="answer px-5 pb-5" id="answer-6">
+                            <div class="answer p-5" id="answer-6" closed>
                                 Мыть голову рекомендуется раз в 7-10 дней (можно чаще или реже по мере
                                 комфортности).
                                 *При более частом мытье причёска будет быстрее терять свой исходный вид.
@@ -364,26 +428,30 @@
                                 в коем случае не запрокидывая сверху вниз!
                             </div>
                         </div>
-                        <div class="care-question px-3 mb-3">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn" type="button" href="#"
-                                data-collapse-for="answer-7">
-                                <p class="p-0"> 7. Можно ли расплестись самостоятельно? </p>
-                                <img src="/resources/images/care-icon.svg" alt="">
+                        <div class="care-question">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn"
+                                type="button" data-collapse-for="answer-7">
+                                <p class="text-left"> 7. Можно ли расплестись самостоятельно? </p>
+                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
+                                </svg>
                             </a>
-                            <div class="answer px-5 pb-5" id="answer-7">
+                            <div class="answer p-5" id="answer-7" closed>
                                 Несложные причёски, типо брейдов можно расплести без труда самим. Более сложные,
                                 такие как, де дреды, каркасные плетения, афрозатылки, в первый раз мы рекомендуем
                                 расплетать в студии. Наши мастера покажут, в какой последовательности это лучше
                                 делать, чтоб не навредить волосам.
                             </div>
                         </div>
-                        <div class="care-question px-3 mb-3">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn" type="button" href="#"
-                                data-collapse-for="answer-8">
-                                <p class="p-0"> 8. Как мыть афрозатылки?</p>
-                                <img src="/resources/images/care-icon.svg" alt="">
+                        <div class="care-question">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn"
+                                type="button" data-collapse-for="answer-8">
+                                <p class="text-left"> 8. Как мыть афрозатылки?</p>
+                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
+                                </svg>
                             </a>
-                            <div class="answer px-5 pb-5" id="answer-8">
+                            <div class="answer p-5" id="answer-8" closed>
                                 Афрозатылок- это частичное плетение.
                                 Отделяем его от незаплетенной части волос и волосистую зону моем в душе, закидывая
                                 голову вниз и используя привычные моющие средства. Сам затылок можно мыть раз в 7-10
@@ -393,14 +461,16 @@
                                 затылком можно мыть уже стоя вертикально в душе, либо лёжа в ванной).
                             </div>
                         </div>
-                        <div class="care-question  px-3 mb-3">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn" type="button" href="#"
-                                data-collapse-for="answer-9">
-                                <p class="p-0"> 9. В каких случаях мастер оставляет за собой право отказать в
+                        <div class="care-question">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn"
+                                type="button" data-collapse-for="answer-9">
+                                <p class="text-left"> 9. В каких случаях мастер оставляет за собой право отказать в
                                     процедуре?</p>
-                                <img src="/resources/images/care-icon.svg" alt="">
+                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
+                                </svg>
                             </a>
-                            <div class="answer px-5 pb-5" id="answer-9">
+                            <div class="answer p-5" id="answer-9" closed>
                                 В случае, если у вас имеются противопоказания и вы не сообщили о них ранее.
                                 Запрещено приходить на сеанс в состоянии алкогольного или наркотического опьянения.
                                 При опоздании на сеанс более чем на 20 минут запись так же может быть отменена, если
@@ -420,7 +490,7 @@
                         Стремимся не только к качественной работе наших мастеров, но и к хорошему сервису.
                     </div>
                     <div>
-                        <img class="w-100 img-fluid p-0" src="/resources/images/contacts-img.png" alt="">
+                        <img class="w-100 img-fluid p-0" src="/resources/images/social_networks/ВАРИАНТ2.jpg" alt="">
                     </div>
 
                     <div class="row justify-content-between my-5">
@@ -438,12 +508,16 @@
                             </div>
                             <div class="mb-3">
                                 <div class="contact-name">Социальные сети:</div>
-                            <div class="social-networks">
-                                <a href="#"><img class="" src="/resources/images/social_networks/vk-dark.svg" alt=""></a>
-                                <a href="#"><img class="" src="/resources/images/social_networks/telegram-dark.svg" alt=""></a>
-                                <a href="#"><img class="" src="/resources/images/social_networks/whatsapp-dark.svg" alt=""></a>
-                                <a href="#"><img class="" src="./resources/images/social_networks/instagram-dark.svg" alt=""></a>
-                            </div>
+                                <div class="social-networks">
+                                    <a href="#"><img class="" src="/resources/images/social_networks/vk-dark.svg"
+                                            alt=""></a>
+                                    <a href="#"><img class="" src="/resources/images/social_networks/telegram-dark.svg"
+                                            alt=""></a>
+                                    <a href="#"><img class="" src="/resources/images/social_networks/whatsapp-dark.svg"
+                                            alt=""></a>
+                                    <a href="#"><img class=""
+                                            src="./resources/images/social_networks/instagram-dark.svg" alt=""></a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-8">
@@ -455,73 +529,73 @@
 
 
 
-           
+
             </section>
 
 
         </main>
 
-    <footer class="footer py-5">
-        <div class="container">
+        <footer class="footer py-5">
+            <div class="container">
 
-            <div class="footer-content row row justify-content-between">
-                <div class="footer-contacts col-4 row justify-content-between flex-column">
-                    <div class="social-networks">
-                        <a href="#"><img class="" src="/resources/images/social_networks/vk.svg" alt=""></a>
-                        <a href="#"><img class="" src="/resources/images/social_networks/telegram.svg" alt=""></a>
-                        <a href="#"><img class="" src="/resources/images/social_networks/whatsapp.svg" alt=""></a>
-                        <a href="#"><img class="" src="./resources/images/social_networks/instagram.svg" alt=""></a>
+                <div class="footer-content row row justify-content-between">
+                    <div class="footer-contacts col-4 row justify-content-between flex-column">
+                        <div class="social-networks">
+                            <a href="#"><img class="" src="/resources/images/social_networks/vk.svg" alt=""></a>
+                            <a href="#"><img class="" src="/resources/images/social_networks/telegram.svg" alt=""></a>
+                            <a href="#"><img class="" src="/resources/images/social_networks/whatsapp.svg" alt=""></a>
+                            <a href="#"><img class="" src="./resources/images/social_networks/instagram.svg" alt=""></a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="footer-phone">
+                                    <img src="/resources/images/phone-icon.svg" alt="">
+                                    <span>7(777)777-7777</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="footer-geolocation">
+                                    <img src="/resources/images/geo-location.png" alt="">
+                                    <span>г. Москва ул. Сущевский вал 43</span>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div>
-                        <a href="#">
-                            <div class="footer-phone">
-                                <img src="/resources/images/phone-icon.svg" alt="">
-                                <span>7(777)777-7777</span>
-                            </div>
+                    <div class="footer-logo col-4">
+                        <a class="logo">
+                            <span class="logo logo-small">
+                                Afrodreads
+                            </span>
                         </a>
                     </div>
-                    <div>
-                        <a href="#">
-                            <div class="footer-geolocation">
-                                <img src="/resources/images/geo-location.png" alt="">
-                                <span>г. Москва ул. Сущевский вал 43</span>
+                    <div class="footer-navigation col-4 row justify-content-between">
+                        <div class="col-6">
+                            <div>
+                                <a href="#">Главная</a>
                             </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-logo col-4">
-                    <a class="logo">
-                        <span class="logo logo-small">
-                            Afrodreads
-                        </span>
-                    </a>
-                </div>
-                <div class="footer-navigation col-4 row justify-content-between">
-                    <div class="col-6">
-                        <div>
-                            <a href="#">Главная</a>
+                            <div>
+                                <a href="#">Услуги</a>
+                            </div>
+                            <div>
+                                <a href="#">Мастера</a>
+                            </div>
                         </div>
-                        <div>
-                            <a href="#">Услуги</a>
-                        </div>
-                        <div>
-                            <a href="#">Мастера</a>
+                        <div class="col-6">
+                            <div>
+                                <a href="#">Уход</a>
+                            </div>
+                            <div>
+                                <a href="#">Контакты</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div>
-                            <a href="#">Уход</a>
-                        </div>
-                        <div>
-                            <a href="#">Контакты</a>
-                        </div>
-                    </div>
+
                 </div>
 
             </div>
-
-        </div>
-    </footer>
+        </footer>
     </div>
 
 
