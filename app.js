@@ -1,18 +1,28 @@
 var fs = require('fs');
 var http = require('http');
 var https = require('https');
-
+var axios = require('axios');
+var date = require('date-and-time');
+var express = require('express');
+const { response } = require('express');
 
 const validatePhone = (value) => /^\+7\s\(\d{3}\)\s\d{3}\s\d{4}$/.test(value);
 
+const CreateMessage = (name, phone) =>{
+
+    const now = new Date();
+    var time = date.format(now,'YYYY-MM-DD HH:mm');
+
+    let text = `🛎 Новая заявка\nДата: ${time}\nИмя: ${name}\nТелефон: ${phone}`;
+    return encodeURI(text);
+}
 
 
 var privateKey = fs.readFileSync('sslcert/server.key', 'utf8');
 var certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
 
 var credentials = { key: privateKey, cert: certificate };
-var express = require('express');
-const { response } = require('express');
+
 var app = express();
 
 app.use(express.json());
@@ -27,7 +37,7 @@ app.get("/", function (request, response) {
     response.sendFile(__dirname + "/index.html");
 });
 
-app.post("/send-user-request", function(request, response)
+app.post("/send-user-request", async function(request, response)
 {
     let phone = request.body['phone-number'];
     let name = request.body['name'];
@@ -42,10 +52,27 @@ app.post("/send-user-request", function(request, response)
         response.json({error: 'Name should be has at least 3 letters'});
     }
 
-
-    console.log(`${phone} ${name}`)
-
-    response.json({status: 'OK'})
+    try
+    {
+        const token = 'secret'; //to connfig
+        const chat_id = 'secret'; //to connfig
+        const text = CreateMessage(name, phone);
+        let response = await axios.get(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${text}`);
+        if(response.date.status == 'ok')
+        {
+            response.json({status: 'OK'})
+        }
+        else
+        {
+            response.status = 500;
+            response.json({error: 'Something went wrong'})
+        }
+    }
+    catch
+    {
+        response.status = 500;
+        response.json({error: 'Something went wrong'})
+    }
 });
 
 
