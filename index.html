@@ -62,7 +62,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!--Подключение библиотек Bootstrap-->
     <script src="/resources/libs/bootstrap-5.0.2/js/bootstrap.min.js"></script>
@@ -84,24 +84,24 @@
     <div class="wrapper">
 
 
-        <div class="d-none modal-window-bg ">
+        <div class="d-none modal-window-bg" id="modal-window-form">
             <div class="modal-window">
                 <div class="d-flex justify-content-end m-2 m-sm-3 m-lg-4">
-                    <a class="close">
+                    <a class="close" id="close-modal-window-form">
                         <img class="img-fluid" src="/resources/images/exit.svg" alt="">
                     </a>
                 </div>
                 <div class="modal-window-content">
                     <h1 class="header-modal-window">Получить бесплатную консультацию</h1>
-                    <form action="#" method="GET">
+                    <form id="callrequest">
                         <div>
-                            <input class="w-100" type="text" name="username" placeholder="Ваше имя">
+                            <input class="w-100" type="text" name="name" placeholder="Ваше имя">
                         </div>
                          <div>
-                            <input class="w-100" type="text" name="phone" placeholder="Номер телефона">
+                            <input class="w-100" type="text" name="phone-number" placeholder="Номер телефона">
                         </div>
                         <div class="modal-window-inf">*Наш менеджер свяжется с Вами</div>
-                        <button class="button modal-window-btn  mt-5 mx-auto" disabled type="submit">Проконсультироваться</button> 
+                        <input class="button modal-window-btn  mt-5 mx-auto" type="submit">Проконсультироваться</input> 
     
                     </form>
 
@@ -110,7 +110,7 @@
         </div>
 
 
-        <div class="d-none modal-window-bg">
+        <div class="d-none modal-window-bg" id="modal-window-answer">
             <div class="modal-window pb-md-5">
                 <div class="d-flex justify-content-end m-2 m-sm-3 m-lg-4">
                     <a class="close">
@@ -195,7 +195,7 @@
                         <h1 class="cover-title">Afrodreads</h1>
                         <p class="cover-subtitle text-right">Студия брейдинга</p>
                     </div>
-                    <a type="" class="button cover-btn text-center mt-5">Получить
+                    <a type="button" id="cover-btn" class="button cover-btn text-center mt-5">Получить
                         бесплатную консультацию</a>
                 </div>
             </section>
@@ -333,8 +333,9 @@
                                         <a href="#" type="button"
                                         class="button master-btn">Записаться</a>
                                     </div>
-                                    <div class="master-photo d-flex flex-column align-items-center justify-content-center w-100"  >
-                                        <img class="master-img" src="/resources/images/masters-photo.png" alt="">
+                                    <div class="master-photo d-flex flex-column justify-content-end">
+                                        <img class="master-photo-img" src="/resources/images/test/maria_3024x3232.JPG" alt="">
+                                        <!-- <div class="master-photo-img"></div> -->
                                     </div>
 
                                     
@@ -379,7 +380,7 @@
                                 data-collapse-for="answer-1">
                                 <p class="text-left"> 1. Как подготовиться к заплетению?</p>
                                 <div>
-                                    <svg style="max-width: 100%; height: auto;" class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg data-collase-target="answer-1" closed class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
                                     </svg>
                                 </div>
@@ -390,7 +391,7 @@
                                 </div> -->
 
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" id="answer-1" closed>
+                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-1" closed>
                                 Важно помыть голову за 7-8 часов перед плетением (можно перед сном). Приветствуется
                                 использование пилинга для кожи головы.
                                 В последнее мытьё перед сеансом кондиционеры/маски/бальзамы минимизируем либо

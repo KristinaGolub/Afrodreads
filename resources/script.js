@@ -1,8 +1,9 @@
 const nameIsEmptyMessage = "Необходимо заполнить имя"
 const nameTooSmallMessage = "Имя должно быть больше 3-х символов"
 const nameTooLargeMessage = "Имя должно быть меньше 32-х символов"
-
 const phoneNotValidMessage = "Необходимо заполнить телефон";
+
+
 
 const validateName = (value) => {
     let isValid = true;
@@ -46,14 +47,27 @@ $(document).ready(function ($) {
         SetValidationStatus("phone-number", validatePhone($(this).val()));
     })
 
-    $(".js-question-btn").click(collapseAccordion)
+    $(".js-question-btn").click(collapseAccordion);
+
+    $('#close-modal-window-form').click(() => closeModel('modal-window-form'))
+    $('#cover-btn').click(() => openModel('modal-window-form'));
 });
 
+
+function openModel(id)
+{
+    $(`#${id}`).removeClass('d-none');    
+}
+
+function closeModel(id)
+{
+    $(`#${id}`).addClass('d-none');
+}
 
 function collapseAccordion(){
     const id = $(this).attr("data-collapse-for");
     
-    const elem = $(`#${id}`);
+    const elem = $(`[data-collase-target='${id}']`);
     var attr = elem.attr("closed");
     if(typeof attr !== 'undefined' && attr !== false)
     {

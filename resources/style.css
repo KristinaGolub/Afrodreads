@@ -647,9 +647,27 @@ form input {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Masters (начало)*/
 .masters {
     text-align: center;
+}
+
+.masters * {
+    overflow: visible;
 }
 
 .carusel_btn {
@@ -686,10 +704,28 @@ form input {
 }
 
 
-@media (min-width: 576px) {
+.master-photo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.master-info {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    z-index: 999;
+
+    background-color: #000000ab
+    /* padding: 50px 0px 50px 50px; */
+}
+
+@media (min-width: 768px) {
     .master-box {
        
-        grid-template-columns: 1fr 0.1fr 1fr;
+        grid-template-columns: 1.6fr 0.17fr 1.17fr;
         grid-row: 1;
     }
 
@@ -698,7 +734,8 @@ form input {
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
-        padding: 24px;
+        padding: 50px 0px 50px 50px;
+        background-color:#00000000;
     }
     
     .master-decoration-box {
@@ -713,18 +750,40 @@ form input {
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 2;
+        z-index: 999;
         padding-top: 40px;
         padding-bottom: 40px;
-        z-index: 999;
     }
 }
 
+.master-photo-img {
+    /* display: block;
+    background-image: url('/resources/images/test/maria_3024x3232.JPG'); */
+    /* background-size: contain; */
+    width: 100%;
+    height: auto;
+    /* background-repeat: no-repeat; */
+}
+
+
+/* @media (min-width: 576px) {
+    .master-photo-img{
+        max-width: 340px;
+        max-height: 440px;
+    }
+}
+*/
+/* 
+@media (min-width: 992px) {
+    .master-photo-img{
+        max-width: 580px;
+        max-height: 620px;
+    }
+} */
 
 
 
-
-
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
     .master-img {
         max-height: 440px;
     
@@ -735,38 +794,11 @@ form input {
     .master-img {
         max-height: 619px;
     }
-}
-
+} */
+/* 
 .master-img {
     height: 100%;
-    /* width: auto; */
-    /* height: 100%; */
-}
-
-/* .master-info {`
-    position: relative;
-
-    border: 3px solid #000000;
-    z-index: 999;
-    text-align: left;
-
-    padding: 0 3em;
-}
-
-@media (min-width: 576px) {
-    .master-info {
-        width: 471px;
-        height: 438px;
-    }
-}
-
-@media (min-width: 992px) {
-    .master-info {
-        width: 741px;
-        height: 667px;
-    }
 } */
-
 
 .master-title {
     font-family: 'Comfortaa';
@@ -832,10 +864,6 @@ form input {
         font-size: 24px;
     }
 }
-
-
-
-
 .master-decoration-black {
     width: 100%;
     height: 100%;
@@ -848,7 +876,6 @@ form input {
     height: 100%;
     border: 3px solid #726A6A;
     transform: rotate(5deg);
-    /* z-index: 1; */
 }
 
 
@@ -859,7 +886,6 @@ form input {
     border-radius: 10px;
     font-weight: 700;
     font-size: 16px;
-    /* text-transform: uppercase; */
     line-height: 0;
     color: #CB0E7F;
 }
@@ -882,6 +908,13 @@ form input {
 }
 
 /*Masters (коенц)*/
+
+
+
+
+
+
+
 
 
 
@@ -971,6 +1004,8 @@ form input {
 .question-marker {
     width: 25px;
     height: 22px;
+    transition-duration: 0.2s;
+    transition-property: transform;
 }
 
 
@@ -1009,6 +1044,10 @@ form input {
 
 .answer[closed] {
     display: none;
+}
+
+.question-marker[closed]{
+    transform: rotate(180deg);
 }
 
 
