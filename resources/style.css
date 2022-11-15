@@ -694,9 +694,9 @@ form input {
 }
 
 .cover-subtitle{
-    font-family: 'Inter';
+    /* font-family: 'Inter'; */
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 10px;
     text-transform: uppercase;
     color: #CB0E7F;
