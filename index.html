@@ -54,6 +54,10 @@
 
     <!-- Подключение стилей фреймворка Bootstrap -->
     <link rel="stylesheet" href="/resources/libs/bootstrap-5.0.2/css/bootstrap.min.css">
+
+    <!-- Подключение анимационных стилей библиотеки Animate.style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!--Собственные стили-->
     <link rel="stylesheet" href="/resources/style.css">
     <!--Шрифты Roboto и Montserrat-->
@@ -62,7 +66,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!--Подключение библиотек Bootstrap-->
     <script src="/resources/libs/bootstrap-5.0.2/js/bootstrap.min.js"></script>
@@ -94,15 +98,17 @@
                 <div class="modal-window-content">
                     <h1 class="header-modal-window">Получить бесплатную консультацию</h1>
                     <form id="callrequest">
-                        <div>
+                        <div data-error-for="name" class="input-validator">
                             <input class="w-100" type="text" name="name" placeholder="Ваше имя">
+                            <span class="modal-window-name valid-message"></span>
                         </div>
-                         <div>
+                        <div data-error-for="phone-number" class="input-validator">
                             <input class="w-100" type="text" name="phone-number" placeholder="Номер телефона">
+                            <span class="modal-window-number valid-message"></span>
                         </div>
                         <div class="modal-window-inf">*Наш менеджер свяжется с Вами</div>
-                        <input class="button modal-window-btn  mt-5 mx-auto" type="submit">Проконсультироваться</input> 
-    
+                        <input class="button modal-window-btn  mt-5 mx-auto" type="submit" value="Проконсультироваться">
+
                     </form>
 
                 </div>
@@ -127,61 +133,61 @@
         <header class="header py-3 py-md-0">
             <div class="container-xl">
                 <div class="d-flex justify-content-between align-items-center">
-                    <a class="header-burger d-flex d-md-none col-2">
-                        <span></span>
-                    </a>
-                    <div class="col-lg-3">
-                        <nav class="nav-burger d-none d-md-flex" id="menu">
+                    <div data-collase-target="burger-menu" class="burger-menu-container" closed>
+                        <div class="header-burger-box">
+                            <a id="burger-menu-button" data-collapse-for="burger-menu" class="header-burger d-flex d-md-none col-2">
+                                <span></span>
+                            </a>
+                        </div>
+                        <nav class="header-navigation d-md-flex" id="menu">
                             <a class="mr-2" href="#cover">Главная</a>
                             <a class="mr-2" href="#services">Услуги</a>
                             <a class="mr-2" href="#masters">Мастера</a>
                             <a class="mr-2" href="#care">Уход</a>
                             <a class="mr-2" href="#contacts">Контакты</a>
                         </nav>
-
                     </div>
-                    <div class="d-none d-md-flex">
+
+                    <div class="logo-box d-none d-md-flex">
                         <a class="logo">
                             <span class="logo logo-small">
                                 Afrodreads
                             </span>
                         </a>
                     </div>
-                    <div class="d-none d-md-flex mr-5">
-                        <a class="phone-link" href="tel:+79774904101">+7&nbsp(977)&nbsp490&nbsp41&nbsp01</a>
-                    </div>
-                    <ul class="d-flex list-unstyled list-inline m-0 align-items-center col-5 col-md-1 justify-content-between">
-                        <li class="list-inline-item">
-                            <a class="social-network__link d-flex align-items-center" href="#" rel="noopener"
-                                target="_blank">
-                                <img alt="Мы Вконтакте" src="/resources/images/social_networks/vk.svg">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="social-network__link d-flex align-items-center" href="#" rel="noopener"
-                                target="_blank">
-                                <img alt="Мы в Telegram" src="/resources/images/social_networks/telegram.svg">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="social-network__link d-flex align-items-center" href="#" rel="noopener"
-                                target="_blank">
-                                <img alt="Мы в Whatsapp" src="/resources/images/social_networks/whatsapp.svg">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="social-network__link d-flex align-items-center" href="#" rel="noopener"
-                                target="_blank">
-                                <img alt="Мы в Instagram" src="/resources/images/social_networks/instagram.svg">
-                            </a>
-                        </li>
-                    </ul>
 
-                    <div class="d-flex d-md-none col-2 justify-content-end">
-                        <a href="#" class="header-phone-icon">
-                            <img class="img-fluid" src="/resources/images/phone-img-white.svg" alt="">
+                    <a class="header-phone d-flex mr-5" href="tel:+79774904101">
+                        <span class="phone-icon-box">
+                            <img class="img-svg" src="/resources/images/phone-img.svg" alt="">
+                        </span>
+                        <span class="phone-link">7&nbsp(977)&nbsp490&nbsp41&nbsp01</span>
+                    </a>
+
+                    <div class="social-networks social-networks-white d-flex">
+                        <a href="https://vk.com/afrodreadsmsk" class="header-network-icon network-icon">
+                            <img class="img-svg"
+                                src="/resources/images/social_networks/vk.svg" alt="">
+                        </a>
+                        <a href="https://t.me/afrodreadsmsk" class="header-network-icon network-icon">
+                            <img class="img-svg"
+                                src="/resources/images/social_networks/telegram.svg" alt="">
+                        </a>
+                        <a href="https://wa.me/79917067186" class="header-network-icon network-icon">
+                            <img class="img-svg"
+                                src="/resources/images/social_networks/whatsapp.svg" alt="">
+                        </a>
+                        <a href="https://instagram.com/afrodreads?igshid=YmMyMTA2M2Y=" class="header-network-icon network-icon">
+                            <img class="img-svg"
+                                src="./resources/images/social_networks/instagram.svg" alt="">
                         </a>
                     </div>
+
+                    <!-- <div class="d-flex d-md-none col-2 justify-content-end">
+                        <a href="#" class="header-phone-icon">
+                            <img class="img-fluid img-svg" src="/resources/images/phone-
+                            img-white.svg" alt="">
+                        </a>
+                    </div> -->
 
 
                 </div>
@@ -209,41 +215,46 @@
                 </div>
             </section>
 
-            <section class="services py-5" id="services">
-                <div class="container-xl">
-                    <h2 class="main-title py-3">Выбери свой стиль</h2>
+            <section class="services" id="services">
+                <div class="container-xl py-3 py-md-5">
+                    <h2 class="main-title py-md-5 py-3 m-0">Выбери свой стиль</h2>
 
                     <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1">
-                        <div class="col px-2 py-3">
+                        <div class="col px-md-2 py-md-3 px-1 py-2">
                             <article class="service-content">
-                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <img src="/resources/images/test/16.JPG" alt="" class="img-fluid">
                                 <div class="service-text p-3">
                                     <p class="services-price">от&nbsp8500р</p>
                                     <p class="services-name">Де(се)&nbspдреды / де(се)&nbspкосы</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="col px-2 py-3">
+                        <div class="col px-md-2 py-md-3 px-1 py-2">
                             <article class="service-content">
-                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <img src="/resources/images/test/15.JPG" alt="" class="img-fluid">
                                 <div class="service-text p-3">
                                     <p class="services-price">от&nbsp1000р</p>
                                     <p class="services-name">Брейды</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="col px-2 py-3">
+                        <div class="col px-md-2 py-md-3 px-1 py-2">
                             <article class="service-content">
-                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <img src="/resources/images/test/12.JPG" alt="" class="img-fluid">
                                 <div class="service-text p-3">
                                     <p class="services-price">от&nbsp5000р</p>
                                     <p class="services-name">Натуральные дреды</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="col px-2 py-3">
+
+
+
+
+
+                        <div class="hidden-service-article animate__animated animate__fadeIn d-none d-sm-block col-sm-6 col-md-4 px-md-2 py-md-3 px-1 py-2">
                             <article class="service-content">
-                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <img src="/resources/images/test/11.JPG" alt="" class="img-fluid">
                                 <div class="service-text p-3">
                                     <p class="services-price">от&nbsp6000р</p>
                                     <p class="services-name">Классические афрокосы / Box braids</p>
@@ -251,36 +262,36 @@
                             </article>
                         </div>
 
-                        <div class="col px-2 py-3">
+                        <div class="hidden-service-article animate__animated animate__fadeIn d-none d-sm-block col-sm-6 col-md-4 px-md-2 py-md-3 px-1 py-2">
                             <article class="service-content">
-                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <img src="/resources/images/test/12.JPG" alt="" class="img-fluid">
                                 <div class="service-text p-3">
                                     <p class="services-price">от&nbsp3500р</p>
                                     <p class="services-name">Афронаращивание</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="col px-2 py-3">
+                        <div class="hidden-service-article animate__animated animate__fadeIn d-none d-sm-block col-sm-6 col-md-4 px-md-2 py-md-3 px-1 py-2">
                             <article class="service-content">
-                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <img src="/resources/images/test/16.JPG" alt="" class="img-fluid">
                                 <div class="service-text p-3">
                                     <p class="services-price">от&nbsp8000р</p>
                                     <p class="services-name">Афрокудри / дредокудри</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="col px-2 py-3">
+                        <div class="hidden-service-article animate__animated animate__fadeIn d-none d-sm-block col-sm-6 col-md-4 px-md-2 py-md-3 px-1 py-2">
                             <article class="service-content">
-                                <img src="/resources/images/services-photos/cover.JPG" alt="" class="img-fluid">
+                                <img src="/resources/images/test/14.JPG" alt="" class="img-fluid">
                                 <div class="service-text p-3">
                                     <p class="services-price">от&nbsp3800р</p>
                                     <p class="services-name">Афрозатылки</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="col px-2 py-3">
+                        <div class="hidden-service-article animate__animated animate__fadeIn d-none d-sm-block col-sm-6 col-md-4 px-md-2 py-md-3 px-1 py-2">
                             <article class="service-content">
-                                <img src="/resources/images/services-photos/cover.JPG"
+                                <img src="/resources/images/test/13.JPG"
                                     alt="Афрокудри/Дредокудри - вплетение в свои волосы кудрявого канекалона"
                                     class="img-fluid">
                                 <div class="service-text p-3">
@@ -290,9 +301,9 @@
                             </article>
                         </div>
 
-                        <div class="col px-2 py-3">
+                        <div class="hidden-service-article animate__animated animate__fadeIn d-none d-sm-block col-sm-6 col-md-4 px-md-2 py-md-3 px-1 py-2">
                             <article class="service-content">
-                                <img src="/resources/images/services-photos/cover.JPG"
+                                <img src="/resources/images/test/15.JPG"
                                     alt="Афрозатылок – афрокосички в зоне затылка" class="img-fluid">
                                 <div class="service-text p-3">
                                     <p class="services-price">от&nbsp3500р</p>
@@ -300,6 +311,9 @@
                                 </div>
                             </article>
                         </div>
+
+
+                        <a class="show-more-link d-block d-sm-none text-center my-3 mx-auto" id="show-more"  type="button">Смотреть больше &#9660;</a>
 
                     </div>
 
@@ -309,14 +323,14 @@
                 </div>
             </section>
 
-            <section class="masters py-5" id="masters">
-                <div class="container-xl">
-                    <h2 class="main-title py-5">Наши мастера</h2>
+            <section class="masters" id="masters">
+                <div class="container-xl py-3 py-md-5">
+                    <h2 class="main-title py-md-5 py-3 m-0">Наши мастера</h2>
 
 
                     <div id="masters_carousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                    
+
                             <div class="carousel-item active">
                                 <div class="master-box">
                                     <div class="d-none d-md-block  master-decoration-box">
@@ -326,45 +340,164 @@
                                         <div class="master-decoration-gray"></div>
                                     </div>
                                     <div class="master-info">
-                                        <p class="master-title">Мастер Ольга</p>
-                                        <p class="master-subtitle">Опыт работы: 5 лет</p>
-                                        <p class="d-none d-md-block master-description">Ольга- наш «менеджер по вайбу». Она точно не даст заскучать и ты даже не заметишь, как пролетит сеанс, ведь обычно это происходит не только увлекательно, но и быстро!  
-                                        Специализируется на изготовлении и вплетении де дредов и де кос, так же практикует брейды. Единственный мастер в нашей команде, который работает так же с креативными окрашиваниями и стрижками.</p>
-                                        <a href="#" type="button"
-                                        class="button master-btn">Записаться</a>
+                                        <div class="master-header">
+                                            <p class="master-title">Мастер Мария</p>
+                                            <p class="master-subtitle">Опыт работы: 12 лет</p>
+                                        </div>
+                                        <p class="d-none d-md-block master-description">Привет, давай знакомиться! <br>
+                                            Меня зовут Мари! Я являюсь основателем, руководителем, а так же топ-мастером
+                                            нашей студии. В сфере брейдинга я нахожусь уже более 12-ти лет. Каждый день
+                                            на протяжении этого времени я плету людей и знаю, как это сделать
+                                            качественно, безопасно и эксклюзивно. Умею понимать и слышать клиентов, чему
+                                            обучила и всю свою команду! </p>
+                                        <div class="master-btn-box">
+                                            <a href="" type="button" class="button master-btn">Записаться</a>
+                                        </div>
                                     </div>
                                     <div class="master-photo d-flex flex-column justify-content-end">
-                                        <img class="master-photo-img" src="/resources/images/test/maria_3024x3232.JPG" alt="">
-                                        <!-- <div class="master-photo-img"></div> -->
+                                        <img class="master-photo-img" src="/resources/images/test/2.JPG"
+                                            alt="">
                                     </div>
 
-                                    
+
                                 </div>
                             </div>
 
-
-
-                            <!-- <div class="carousel-item">
-                                
-                            </div>
                             <div class="carousel-item">
-                                
-                            </div> -->
+                                <div class="master-box">
+                                    <div class="d-none d-md-block  master-decoration-box">
+                                        <div class="master-decoration-black"></div>
+                                    </div>
+                                    <div class="d-none d-md-block  master-decoration-box">
+                                        <div class="master-decoration-gray"></div>
+                                    </div>
+                                    <div class="master-info">
+                                        <div class="master-header">
+                                            <p class="master-title">Мастер Ольга</p>
+                                            <p class="master-subtitle">Опыт работы: 5 лет</p>
+                                        </div>
+                                        <p class="d-none d-md-block master-description">Ольга- наш «менеджер по вайбу».
+                                            Она точно не даст заскучать и ты даже не заметишь, как пролетит сеанс, ведь
+                                            обычно это происходит не только увлекательно, но и быстро!
+                                            Специализируется на изготовлении и вплетении де дредов и де кос, так же
+                                            практикует брейды. Единственный мастер в нашей команде, который работает так
+                                            же с креативными окрашиваниями и стрижками. </p>
+                                        <div class="master-btn-box">
+                                            <a href="" type="button" class="button master-btn">Записаться</a>
+                                        </div>
+                                    </div>
+                                    <div class="master-photo d-flex flex-column justify-content-end">
+                                        <img class="master-photo-img" src="/resources/images/test/3.JPG"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="master-box">
+                                    <div class="d-none d-md-block  master-decoration-box">
+                                        <div class="master-decoration-black"></div>
+                                    </div>
+                                    <div class="d-none d-md-block  master-decoration-box">
+                                        <div class="master-decoration-gray"></div>
+                                    </div>
+                                    <div class="master-info">
+                                        <div class="master-header">
+                                            <p class="master-title">Мастер Алена</p>
+                                            <p class="master-subtitle">Опыт работы: 2 года</p>
+                                        </div>
+                                        <p class="d-none d-md-block master-description"> Алёна-очень размеренный и
+                                            внимательный к мелочам мастер. Работает с де дредами, де косами, а так же с
+                                            натуральными дредами. Помимо всего Алена делает эксклюзивные украшения из
+                                            натуральных камней и перьев, которые доступны в продаже в нашей студии и
+                                            могут осуществляться под заказ.</p>
+                                        <div class="master-btn-box">
+                                            <a href="" type="button" class="button master-btn">Записаться</a>
+                                        </div>
+                                    </div>
+                                    <div class="master-photo d-flex flex-column justify-content-end">
+                                        <img class="master-photo-img" src="/resources/images/test/1.JPG"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="master-box">
+                                    <div class="d-none d-md-block  master-decoration-box">
+                                        <div class="master-decoration-black"></div>
+                                    </div>
+                                    <div class="d-none d-md-block  master-decoration-box">
+                                        <div class="master-decoration-gray"></div>
+                                    </div>
+                                    <div class="master-info">
+                                        <div class="master-header">
+                                            <p class="master-title">Мастер Ксения</p>
+                                            <p class="master-subtitle">Опыт работы: 2 года</p>
+                                        </div>
+                                        <p class="d-none d-md-block master-description">Ксения- единственный мастер
+                                            работающий с афронаращиванием, так же специализируется брейдах и каркасных
+                                            плетениях, де дредах, де косах.</p>
+                                        <div class="master-btn-box">
+                                            <a href="" type="button" class="button master-btn">Записаться</a>
+                                        </div>
+                                    </div>
+                                    <div class="master-photo d-flex flex-column justify-content-end">
+                                        <img class="master-photo-img" src="/resources/images/test/4.JPG"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="master-box">
+                                    <div class="d-none d-md-block  master-decoration-box">
+                                        <div class="master-decoration-black"></div>
+                                    </div>
+                                    <div class="d-none d-md-block  master-decoration-box">
+                                        <div class="master-decoration-gray"></div>
+                                    </div>
+                                    <div class="master-info">
+                                        <div class="master-header">
+                                            <p class="master-title">Мастер Юлия</p>
+                                            <p class="master-subtitle">Опыт работы: 10 лет</p>
+                                        </div>
+                                        <p class="d-none d-md-block master-description">Юлия самый опытный дредмейкер в
+                                            студии после старшего мастера, в нашей команде она дольше всех. Юля
+                                            педантична и внимательна в своей работе. Специализируется на натуральных
+                                            дредах, всех видах де дредов и де кос.</p>
+                                        <div class="master-btn-box">
+                                            <a href="" type="button" class="button master-btn">Записаться</a>
+                                        </div>
+                                    </div>
+                                    <div class="master-photo d-flex flex-column justify-content-end">
+                                        <img class="master-photo-img" src="/resources/images/test/5.JPG"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
 
-                    <div class="masters-navigation">
-                        <button type="button" class="carusel_btn carusel_btn_left" data-bs-target="#masters_carousel" data-bs-slide="prev"></button>
+                    <div class="masters-navigation d-none d-md-block">
+                        <button type="button" class="carusel_btn carusel_btn_left" data-bs-target="#masters_carousel"
+                            data-bs-slide="prev"></button>
 
-                        <button type="button" class="carusel_btn_indicator" data-bs-target="#masters_carousel" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" class="carusel_btn_indicator" data-bs-target="#masters_carousel" data-bs-slide-to="1"></button>
-                        <button type="button" class="carusel_btn_indicator" data-bs-target="#masters_carousel" data-bs-slide-to="2"></button>
-                        <button type="button" class="carusel_btn_indicator" data-bs-target="#masters_carousel" data-bs-slide-to="3"></button>
-                        <button type="button" class="carusel_btn_indicator" data-bs-target="#masters_carousel" data-bs-slide-to="4"></button>
+                        <button type="button" class="carusel_btn_indicator" data-bs-target="#masters_carousel"
+                            data-bs-slide-to="0" class="active"></button>
+                        <button type="button" class="carusel_btn_indicator" data-bs-target="#masters_carousel"
+                            data-bs-slide-to="1"></button>
+                        <button type="button" class="carusel_btn_indicator" data-bs-target="#masters_carousel"
+                            data-bs-slide-to="2"></button>
+                        <button type="button" class="carusel_btn_indicator" data-bs-target="#masters_carousel"
+                            data-bs-slide-to="3"></button>
+                        <button type="button" class="carusel_btn_indicator" data-bs-target="#masters_carousel"
+                            data-bs-slide-to="4"></button>
 
-                        <button type="button" class="carusel_btn carusel_btn_right" data-bs-target="#masters_carousel" data-bs-slide="next"></button>
-                    </div>    
+                        <button type="button" class="carusel_btn carusel_btn_right" data-bs-target="#masters_carousel"
+                            data-bs-slide="next"></button>
+                    </div>
 
 
                 </div>
@@ -372,24 +505,16 @@
 
             <section id="care" class="care">
                 <div class="container-xl py-3 py-md-5">
-                    <h2 class="main-title py-md-5 py-1
+                    <h2 class="main-title py-md-5 py-3 m-0
                     ">Часто задаваемые вопросы</h2>
                     <div>
                         <div class="care-question">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3" type="button"
-                                data-collapse-for="answer-1">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3"
+                                type="button" data-collapse-for="answer-1">
                                 <p class="text-left"> 1. Как подготовиться к заплетению?</p>
-                                <div>
-                                    <svg data-collase-target="answer-1" closed class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
-                                    </svg>
+                                <div data-collase-target="answer-1" closed class="question-marker">
+                                    <img class="img-svg" src="./resources/images/arrow.svg" alt="">
                                 </div>
-
-                                <!-- <div class="question-icon-box d-block">
-                                    <img class="img-fluid" src="/resources/images/question-icon.svg"
-                                        alt="">
-                                </div> -->
-
                             </a>
                             <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-1" closed>
                                 Важно помыть голову за 7-8 часов перед плетением (можно перед сном). Приветствуется
@@ -399,28 +524,28 @@
                             </div>
                         </div>
                         <div class="care-question">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3" type="button"
-                                data-collapse-for="answer-2">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3"
+                                type="button" data-collapse-for="answer-2">
                                 <p class="text-left"> 2. Как подготовиться к заплетению натуральных дредов?</p>
-                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
-                                </svg>
+                                <div data-collase-target="answer-2" closed class="question-marker">
+                                    <img class="img-svg" src="./resources/images/arrow.svg" alt="">
+                                </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" id="answer-2" closed>
+                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-2" closed>
                                 Важно помыть голову за 7-8 часов перед плетением (можно перед сном). Приветствуется
                                 использование пилинга для кожи головы.
                                 Маски/кондиционеры/бальзамы исключаем во время последнего мытья!
                             </div>
                         </div>
                         <div class="care-question">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3" type="button"
-                                data-collapse-for="answer-3">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3"
+                                type="button" data-collapse-for="answer-3">
                                 <p class="text-left"> 3. Могут ли быть противопоказания к плетению?</p>
-                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
-                                </svg>
+                                <div data-collase-target="answer-3" closed class="question-marker">
+                                    <img class="img-svg" src="./resources/images/arrow.svg" alt="">
+                                </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" id="answer-3" closed>
+                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-3" closed>
                                 Противопоказания к плетению могут быть следующие:
                                 -свежие незажившие раны на коже головы;
                                 -педикулез (вши);
@@ -432,14 +557,14 @@
                             </div>
                         </div>
                         <div class="care-question">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3" type="button"
-                                data-collapse-for="answer-4">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3"
+                                type="button" data-collapse-for="answer-4">
                                 <p class="text-left"> 4. В каких случаях плестись лучше с осторожностью? </p>
-                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
-                                </svg>
+                                <div data-collase-target="answer-4" closed class="question-marker">
+                                    <img class="img-svg" src="./resources/images/arrow.svg" alt="">
+                                </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" id="answer-4" closed>
+                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-4" closed>
                                 Осветлённые сухие концы, химия, бустап, ботокс, хна.
                                 Этой категории людей мы рекомендуем расплетаться непосредственно у мастера, так как
                                 волосы могут быть подвержены бОльшей ломкости и, при самостоятельном, расплетание
@@ -448,16 +573,16 @@
                             </div>
                         </div>
                         <div class="care-question">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3" type="button"
-                                data-collapse-for="answer-5">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3"
+                                type="button" data-collapse-for="answer-5">
                                 <p class="text-left"> 5. Как избежать возникновения раздражения и бороться с
                                     дискомфортом?
                                 </p>
-                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
-                                </svg>
+                                <div data-collase-target="answer-5" closed class="question-marker">
+                                    <img class="img-svg" src="./resources/images/arrow.svg" alt="">
+                                </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" id="answer-5" closed>
+                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-5" closed>
                                 Первые 3-5 дней являются адаптационным периодом после заплетения. Зуд, тяжесть и
                                 стянутые ощущения являются нормой в этот промежуток времени. Не рекомендуется честь
                                 голову грязными руками, делать тугие и высокие причёски в этот период. Для
@@ -466,14 +591,14 @@
                             </div>
                         </div>
                         <div class="care-question">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3" type="button"
-                                data-collapse-for="answer-6">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3"
+                                type="button" data-collapse-for="answer-6">
                                 <p class="text-left"> 6. Как мыть голову? </p>
-                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
-                                </svg>
+                                <div data-collase-target="answer-6" closed class="question-marker">
+                                    <img class="img-svg" src="./resources/images/arrow.svg" alt="">
+                                </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" id="answer-6" closed>
+                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-6" closed>
                                 Мыть голову рекомендуется раз в 7-10 дней (можно чаще или реже по мере
                                 комфортности).
                                 *При более частом мытье причёска будет быстрее терять свой исходный вид.
@@ -487,14 +612,14 @@
                             </div>
                         </div>
                         <div class="care-question">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3" type="button"
-                                data-collapse-for="answer-7">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3"
+                                type="button" data-collapse-for="answer-7">
                                 <p class="text-left"> 7. Можно ли расплестись самостоятельно? </p>
-                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
-                                </svg>
+                                <div data-collase-target="answer-7" closed class="question-marker">
+                                    <img class="img-svg" src="./resources/images/arrow.svg" alt="">
+                                </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" id="answer-7" closed>
+                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-7" closed>
                                 Несложные причёски, типо брейдов можно расплести без труда самим. Более сложные,
                                 такие как, де дреды, каркасные плетения, афрозатылки, в первый раз мы рекомендуем
                                 расплетать в студии. Наши мастера покажут, в какой последовательности это лучше
@@ -502,14 +627,14 @@
                             </div>
                         </div>
                         <div class="care-question">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3" type="button"
-                                data-collapse-for="answer-8">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3"
+                                type="button" data-collapse-for="answer-8">
                                 <p class="text-left"> 8. Как мыть афрозатылки?</p>
-                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
-                                </svg>
+                                <div data-collase-target="answer-8" closed class="question-marker">
+                                    <img class="img-svg" src="./resources/images/arrow.svg" alt="">
+                                </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" id="answer-8" closed>
+                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-8" closed>
                                 Афрозатылок- это частичное плетение.
                                 Отделяем его от незаплетенной части волос и волосистую зону моем в душе, закидывая
                                 голову вниз и используя привычные моющие средства. Сам затылок можно мыть раз в 7-10
@@ -520,15 +645,15 @@
                             </div>
                         </div>
                         <div class="care-question">
-                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3" type="button"
-                                data-collapse-for="answer-9">
+                            <a class="d-flex justify-content-between align-items-center js-question-btn p-2 p-md-3"
+                                type="button" data-collapse-for="answer-9">
                                 <p class="text-left"> 9. В каких случаях мастер оставляет за собой право отказать в
                                     процедуре?</p>
-                                <svg class="question-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M32 7.86255L20 18.9625L8 7.86255" class="care-icon" stroke-width="3" />
-                                </svg>
+                                <div data-collase-target="answer-9" closed class="question-marker">
+                                    <img class="img-svg" src="./resources/images/arrow.svg" alt="">
+                                </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" id="answer-9" closed>
+                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-9" closed>
                                 В случае, если у вас имеются противопоказания и вы не сообщили о них ранее.
                                 Запрещено приходить на сеанс в состоянии алкогольного или наркотического опьянения.
                                 При опоздании на сеанс более чем на 20 минут запись так же может быть отменена, если
@@ -540,8 +665,8 @@
             </section>
 
             <section id="contacts" class="contacts">
-                <div class="container-xl py-3 py-md-5">
-                    <h2 class="main-title py-md-3 py-1">Наши контакты</h2>
+                <div class="container-xl py-2 py-md-5">
+                    <h2 class="main-title py-md-3 py-2 m-0">Наши контакты</h2>
                     <div class="contacts-description py-lg-5 py-md-3 py-2">
                         Наша студия брейдинга находится в Москве в 5 минутах от м. Марьина роща.
                         Мы сделали все для комфортного времяпрепровождения наших гостей.
@@ -555,35 +680,35 @@
                         <div class="col-md-4 col-12">
                             <div class="mb-3 contact">
                                 <div class="contact-name">Телефон:</div>
-                                <div class="d-flex flex-row ">
-                                    <a href="#" class="phone-icon-box">
-                                        <img class="img-fluid" src="/resources/images/phone-img-dark.svg" alt="">
-                                    </a>
-                                    <div class="contact-data">7(777)777-7777</div>
-                                </div>
+                                <a href="tel:+79774904101" class="contact-data d-flex flex-row align-items-center">
+                                    <span class="phone-icon-box">
+                                        <img class="img-fluid img-svg" src="/resources/images/phone-img-dark.svg" alt="">
+                                    </span>
+                                    <span>7(777)777-7777</span>
+                                </a>
                             </div>
                             <div class="mb-3 contact">
                                 <div class="contact-name">E-mail:</div>
-                                <div class="contact-data">afrodreds@gmail.com</div>
+                                <a class="contact-data">afrodreds@gmail.com</a>
                             </div>
                             <div class="mb-3 contact">
                                 <div class="contact-name">Социальные сети:</div>
-                                <div class="social-networks d-flex flex-row">
-                                    <a href="#" class="network-icon-box d-block">
-                                        <img class="img-fluid" src="/resources/images/social_networks/vk-dark.svg"
+                                <div class="social-networks social-networks-dark d-flex flex-row">
+                                    <a href="#" class="network-icon d-block">
+                                        <img class="img-fluid img-svg" src="/resources/images/social_networks/vk.svg"
                                             alt="">
                                     </a>
-                                    <a href="#" class="network-icon-box d-block">
-                                        <img class="img-fluid" src="/resources/images/social_networks/telegram-dark.svg"
-                                            alt="">
+                                    <a href="#" class="network-icon d-block">
+                                        <img class="img-fluid img-svg"
+                                            src="/resources/images/social_networks/telegram.svg" alt="">
                                     </a>
-                                    <a href="#" class="network-icon-box d-block">
-                                        <img class="img-fluid" src="/resources/images/social_networks/whatsapp-dark.svg"
-                                            alt="">
+                                    <a href="#" class="network-icon d-block">
+                                        <img class="img-fluid img-svg"
+                                            src="/resources/images/social_networks/whatsapp.svg" alt="">
                                     </a>
-                                    <a href="#" class="network-icon-box d-block">
-                                        <img class="img-fluid"
-                                            src="./resources/images/social_networks/instagram-dark.svg" alt="">
+                                    <a href="#" class="network-icon d-block">
+                                        <img class="img-fluid img-svg"
+                                            src="./resources/images/social_networks/instagram.svg" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -607,21 +732,38 @@
             <div class="container-xl">
 
                 <div class="footer-content d-flex row  justify-content-between">
-                    <div class="footer-contacts text-center text-md-start col-12 col-md-4 row justify-content-between flex-column">
-                        <div class="social-networks mb-2">
-                            <a href="#" class="footer-network-link"><img class="" src="/resources/images/social_networks/vk.svg" alt=""></a>
-                            <a href="#" class="footer-network-link"><img class="" src="/resources/images/social_networks/telegram.svg" alt=""></a>
-                            <a href="#" class="footer-network-link"><img class="" src="/resources/images/social_networks/whatsapp.svg" alt=""></a>
-                            <a href="#" class="footer-network-link"><img class="" src="./resources/images/social_networks/instagram.svg" alt=""></a>
+                    <div
+                        class="footer-contacts text-center text-md-start col-12 col-md-4 row justify-content-between flex-column">
+                        <div
+                            class="social-networks social-networks-white mb-2 d-flex justify-content-center justify-content-md-start">
+                            <a href="#" class="footer-network-icon network-icon"><img class="img-svg"
+                                    src="/resources/images/social_networks/vk.svg" alt=""></a>
+                            <a href="#" class="footer-network-icon network-icon"><img class="img-svg"
+                                    src="/resources/images/social_networks/telegram.svg" alt=""></a>
+                            <a href="#" class="footer-network-icon network-icon"><img class="img-svg"
+                                    src="/resources/images/social_networks/whatsapp.svg" alt=""></a>
+                            <a href="#" class="footer-network-icon network-icon"><img class="img-svg"
+                                    src="./resources/images/social_networks/instagram.svg" alt=""></a>
                         </div>
-                        <div class="mb-2">
-                            <a href="#">
-                                <div class="footer-phone">
-                                    <img src="/resources/images/phone-icon.svg" alt="">
-                                    <span>7(777)777-7777</span>
-                                </div>
+
+                        <!-- <div class="mb-2"> -->
+                            <a class="footer-phone d-flex justify-content-center justify-content-md-start mb-2" href="tel:+79774904101">
+                                <span class="phone-icon-box">
+                                    <img class="img-fluid img-svg" src="/resources/images/phone-img.svg" alt="">
+                                </span>
+                                <span>7(777)777-7777</span>
                             </a>
-                        </div>
+                        <!-- </div> -->
+
+
+                        <!-- <a class="header-phone d-flex mr-5" href="tel:+79774904101">
+                            <span class="phone-icon-box">
+                                <img class="img-svg" src="/resources/images/phone-img.svg" alt="">
+                            </span>
+                            <span class="phone-link">7&nbsp(977)&nbsp490&nbsp41&nbsp01</span>
+                        </a> -->
+
+
                         <div class="mb-2">
                             <a href="#">
                                 <div class="footer-geolocation">
@@ -638,24 +780,24 @@
                             </span>
                         </a>
                     </div>
-                    <div class="footer-navigation d-none d-md-flex col-md-4 row justify-content-between">
+                    <div class="footer-navigation d-none d-md-flex col-md-4  justify-content-between">
                         <div class="col-6">
-                            <div>
-                                <a href="#">Главная</a>
+                            <div class="d-flex flex-column align-items-center">
+                                <a href="#cover" class="footer-section-link">Главная</a>
                             </div>
-                            <div>
-                                <a href="#">Услуги</a>
+                            <div class="d-flex flex-column align-items-center">
+                                <a href="#services" class="footer-section-link">Услуги</a>
                             </div>
-                            <div>
-                                <a href="#">Мастера</a>
+                            <div class="d-flex flex-column align-items-center">
+                                <a href="#masters" class="footer-section-link">Мастера</a>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div>
-                                <a href="#">Уход</a>
+                            <div class="d-flex flex-column align-items-center">
+                                <a href="#care" class="footer-section-link">Уход</a>
                             </div>
-                            <div>
-                                <a href="#">Контакты</a>
+                            <div class="d-flex flex-column align-items-center">
+                                <a href="#contacts" class="footer-section-link">Контакты</a>
                             </div>
                         </div>
                     </div>
@@ -664,6 +806,20 @@
 
             </div>
         </footer>
+
+
+
+        <div class="fixed-links d-flex flex-column">
+            <a href="#" class="fixed-link fixed-whatsapp-link d-block">
+                <img class="img-svg" src="" alt="">
+            </a>
+            <a href="#" class="fixed-link fixed-tg-link d-block">
+                <img class="img-svg" src="" alt="">
+            </a>
+            <a href="#" class="fixed-link fixed-up-link d-block">
+                <img class="img-svg" src="" alt="">
+            </a>
+        </div>
     </div>
 
 
