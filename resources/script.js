@@ -32,6 +32,12 @@ const validatePhone = (value) => {
 }
 
 
+$(window).on('load', function () {
+    $('.loader').addClass('loaded_hiding');
+    window.setTimeout(function () {
+        $('.loader').remove()
+    }, 500);
+});
 
 
 // app run (начало)
