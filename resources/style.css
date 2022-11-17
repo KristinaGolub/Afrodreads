@@ -20,8 +20,8 @@ a {
 
 a[type="button"] {
     -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .wrapper {
@@ -35,7 +35,7 @@ a[type="button"] {
     width: 100%;
     padding-bottom: 121%;
     overflow: hidden;
-  }
+}
 
 .img-svg {
     display: inline-block;
@@ -43,30 +43,6 @@ a[type="button"] {
     top: 0;
     left: 0;
 }
-
-
-/* + */
-
-/* #menu.active {
-    transition: width 500ms;
-    width: 100%;
-    visibility: visible;
-} */
-
-/* .btn {
-    width: 250px;
-    height: 60px;
-    border-radius: 5px;
-    padding: 0.8em 1.8em;
-    text-transform: uppercase;
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    border:none;
-    letter-spacing: 0.1em;
-    color: #FFFFFF;
-    background-color: #E96E9A;
-} */
-
 
 .button {
     display: flex;
@@ -81,26 +57,24 @@ a[type="button"] {
 
 .button:hover {
     text-decoration: none;
-
 }
-
 
 .main-title {
     text-align: center;
     font-size: 24px;
-
 }
+
 @media (min-width: 576px) {
     .main-title {
         font-size: 32px;
     }
 }
+
 @media (min-width: 992px) {
     .main-title {
         font-size: 40px;
     }
 }
-
 
 #menu.hidden {
     width: 0px;
@@ -140,6 +114,7 @@ a[type="button"] {
         width: auto;
     }
 }
+
 .modal-window-content {
     padding: 3em 2em;
     padding-top: 0;
@@ -159,6 +134,7 @@ a[type="button"] {
         font-size: 18px;
     }
 }
+
 @media (min-width: 992px) {
     .header-modal-window  {
         font-size: 25px;
@@ -184,6 +160,7 @@ form input {
         font-size: 18px;
     }
 }
+
 @media (min-width: 992px) {
     form input  {
         font-size: 20px;
@@ -236,9 +213,9 @@ form input {
         width: 240px;
         height: 34px;
         font-size: 16px;
-
     }
 }
+
 @media (min-width: 992px) {
     .modal-window-btn  {
         border-radius: 10px;

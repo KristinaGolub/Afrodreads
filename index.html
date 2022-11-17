@@ -829,20 +829,7 @@
 
 
 
-
-
     <script type="text/javascript">
-        // new DGWidgetLoader({ 
-        //     "width": 640, 
-        //     "height": 600, 
-        //     "borderColor": "#a3a3a3", 
-        //     "pos": { "lat": 55.793875056082285, "lon": 37.60911941528321, "zoom": 16 }, 
-        //     "opt": { "city": "moscow" }, 
-        //     "org": [{ "id": "70000001046603879" }] });
-
-
-
-
         var map;
         DG.then(function () {
             map = DG.map('map', {
@@ -851,9 +838,6 @@
                 fullscreenControl: false,
                 zoomControl: false,
             });
-
-            // DG.showFirm('141265770712989')
-            // map.showFirm('141265770712989')
 
             DG.marker([55.793615, 37.609297]).addTo(map).bindPopup('Брейд-студия Afrodreads!');
         });
