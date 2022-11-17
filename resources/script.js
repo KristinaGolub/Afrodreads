@@ -149,12 +149,16 @@ function submitHandler(event) {
     SetValidationStatus("phone-number", phoneValidation)
 
     if (nameValidation.isValid && phoneValidation.isValid) {
-        axios.post('/send-user-request', request)
+        var bodyFormData = new FormData();
+        bodyFormData.append('name', request["name"])
+        bodyFormData.append('phone-number', request["phone-number"])
+
+        axios.post('/send-user-request.php', bodyFormData)
             .then(function (response) {
                 console.log(response);
             })
             .catch(function (error) {
-                alert("Упс.. произошла ошибка.")
+                alert("Упс произошла ошибка")
             });
     }
 
