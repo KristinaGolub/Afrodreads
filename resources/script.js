@@ -54,7 +54,7 @@ $(document).ready(function ($) {
             SetValidationStatus("name", {isValid:true, message:"" })
             SetValidationStatus("phone-number", {isValid:true, message:"" })
         })
-    $('#cover-btn').click(() => openModel('modal-window-form'));
+    $('.btn-open-modal-window').click(() => openModel('modal-window-form'));
 
     $('.show-more-link').click(showMore)
 
