@@ -34,7 +34,6 @@ const validatePhone = (value) => {
 
 
 
-
 // app run (начало)
 $(document).ready(function ($) {
     $('#callrequest').submit(submitHandler);

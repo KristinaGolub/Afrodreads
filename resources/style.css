@@ -4,6 +4,72 @@
     src: url(/resources/fonts/TTF/BeautifulBloom-Regular.ttf); /* Путь к файлу со шрифтом */
 }
 
+
+.loader {
+    position: fixed;
+    background: black;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+.loader-visual-box{
+    position: relative;
+}
+
+.loader-text::before{
+    content: "Загрузка...";
+    animation-duration: 2s;
+    animation-name: loadertext;
+}
+
+.loader-visual{
+    position: absolute;
+    background-color: #F31F9F;
+    width: 20px;
+    height: 20px;
+    display: block;
+    animation-name: loaderanim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.loader-visual-revers{    
+    margin-left: 40px; 
+    margin-top: 40px; 
+    animation-direction: reverse;
+}
+
+@keyframes loadertext {
+    0% { content: "Загрузка"}
+    33% { content: "Загрузка."}
+    66% {content: "Загрузка.."}
+    100% {content: "Загрузка..."}
+}
+
+@keyframes loaderanim {
+    0% { 
+        top: 0;
+        left: 0;
+    }
+    25% { 
+        top: 0;
+        left: 100px;
+    }
+    50% { 
+        top: 100px;
+        left: 100px;
+    }
+    75% { 
+        top: 100px;
+        left: 0;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+
 html, 
 body {
     padding: 0;
