@@ -41,11 +41,6 @@
     <meta name="theme-color" content="#E5E5E5"> -->
 
 
-
-
-
-
-
     <meta property="og:title" content="" />
     <meta property="og:url" content="" />
     <meta property="og:description" content="" />
@@ -85,20 +80,7 @@
 </head>
 
 <body>
-
-
     <div class="wrapper">
-
-
-        <div class="loader">
-            <div class="loader-box">
-                <div class="loader-visual-box">
-                    <span class="loader-visual"></span>
-                    <span class="loader-visual loader-visual-revers"></span>    
-                </div>
-                <span class="loader-text"></span>
-            </div>
-        </div>
 
         <div class="d-none modal-window-bg" id="modal-window-form">
             <div class="modal-window">
@@ -127,7 +109,6 @@
             </div>
         </div>
 
-
         <div class="d-none modal-window-bg" id="modal-window-answer">
             <div class="modal-window pb-md-5">
                 <div class="d-flex justify-content-end m-2 m-sm-3 m-lg-4">
@@ -145,18 +126,18 @@
         <header class="header py-3 py-md-0" id="header">
             <div class="container-xl">
                 <div class="d-flex justify-content-between align-items-center">
-                    <div data-collase-target="burger-menu" class="burger-menu-container" closed>
+                    <div data-collase-target="burger-menu" class="burger-menu-container" closed id="burger-menu-container">
                         <div class="header-burger-box">
                             <a id="burger-menu-button" data-collapse-for="burger-menu" class="header-burger d-flex d-md-none col-2">
                                 <span></span>
                             </a>
                         </div>
                         <nav class="header-navigation d-md-flex" id="menu">
-                            <a class="mr-2" href="#cover">Главная</a>
-                            <a class="mr-2" href="#services">Услуги</a>
-                            <a class="mr-2" href="#masters">Мастера</a>
-                            <a class="mr-2" href="#care">Уход</a>
-                            <a class="mr-2" href="#contacts">Контакты</a>
+                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="#cover">Главная</a>
+                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="#services">Услуги</a>
+                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="#masters">Мастера</a>
+                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="#care">Уход</a>
+                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="#contacts">Контакты</a>
                         </nav>
                     </div>
 
@@ -169,38 +150,38 @@
                     </div>
 
                     <a class="header-phone d-flex mr-5" href="tel:+79917067186">
-                        <span class="phone-icon-box">
+                        <span class="phone-icon-box d-flex flex-column align-items-center">
                             <img class="img-svg" src="/resources/images/social-networks/phone-img.svg" alt="">
                         </span>
                         <span class="phone-link">7&nbsp(991)&nbsp706&nbsp71&nbsp86</span>
                     </a>
 
                     <div class="social-networks social-networks-white d-flex">
-                        <a href="https://vk.com/afrodreadsmsk" class="header-network-icon network-icon">
-                            <img class="img-svg"
-                                src="/resources/images/social-networks/vk.svg" alt="">
+
+                        <a href="https://vk.com/afrodreadsmsk" target="_blank" class="header-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
+                            <div class="header-img-box-vk">
+                                <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/vk.svg" alt="">
+                            </div>
                         </a>
-                        <a href="https://t.me/afrodreadsmsk" class="header-network-icon network-icon">
-                            <img class="img-svg"
-                                src="/resources/images/social-networks/telegram.svg" alt="">
+
+                        <a href="https://t.me/afrodreadsmsk" target="_blank" class="header-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
+                            <div class="header-img-box-tg">
+                                <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/telegram.svg" alt="">
+                            </div>
                         </a>
-                        <a href="https://wa.me/79917067186" class="header-network-icon network-icon">
-                            <img class="img-svg"
-                                src="/resources/images/social-networks/whatsapp.svg" alt="">
+
+                        <a href="https://wa.me/79917067186" target="_blank" class="header-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
+                            <div class="header-img-box-wa">
+                                <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/whatsapp.svg" alt="">
+                            </div>
                         </a>
-                        <a href="https://instagram.com/afrodreads?igshid=YmMyMTA2M2Y=" class="header-network-icon network-icon">
-                            <img class="img-svg"
-                                src="./resources/images/social-networks/instagram.svg" alt="">
+
+                        <a href="https://instagram.com/afrodreads?igshid=YmMyMTA2M2Y=" target="_blank" class="header-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
+                            <div class="header-img-box-inst">
+                                <img class="img-svg w-100 h-auto" src="./resources/images/social-networks/instagram.svg" alt="">
+                            </div>
                         </a>
                     </div>
-
-                    <!-- <div class="d-flex d-md-none col-2 justify-content-end">
-                        <a href="#" class="header-phone-icon">
-                            <img class="img-fluid img-svg" src="/resources/images/phone-
-                            img-white.svg" alt="">
-                        </a>
-                    </div> -->
-
 
                 </div>
             </div>
@@ -217,7 +198,6 @@
                         бесплатную консультацию</a>
                 </div>
             </section>
-
 
             <section class="hello" id="hello">
                 <div class="container-xl">
@@ -260,10 +240,6 @@
                             </article>
                         </div>
 
-
-
-
-
                         <div class="hidden-service-article animate__animated animate__fadeIn d-none d-sm-block col-sm-6 col-md-4 px-md-2 py-md-3 px-1 py-2">
                             <article class="service-content">
                                 <img src="/resources/images/services-photos/11.JPG" alt="" class="img-fluid">
@@ -273,7 +249,6 @@
                                 </div>
                             </article>
                         </div>
-
                         <div class="hidden-service-article animate__animated animate__fadeIn d-none d-sm-block col-sm-6 col-md-4 px-md-2 py-md-3 px-1 py-2">
                             <article class="service-content">
                                 <img src="/resources/images/services-photos/12.JPG" alt="" class="img-fluid">
@@ -312,7 +287,6 @@
                                 </div>
                             </article>
                         </div>
-
                         <div class="hidden-service-article animate__animated animate__fadeIn d-none d-sm-block col-sm-6 col-md-4 px-md-2 py-md-3 px-1 py-2">
                             <article class="service-content">
                                 <img src="/resources/images/services-photos/15.JPG"
@@ -324,13 +298,9 @@
                             </article>
                         </div>
 
-
                         <a class="show-more-link d-block d-sm-none text-center my-3 mx-auto" id="show-more"  type="button">Смотреть больше &#9660;</a>
 
                     </div>
-
-
-
 
                 </div>
             </section>
@@ -339,10 +309,16 @@
                 <div class="container-xl py-3 py-md-5 px-1">
                     <h2 class="main-title py-md-5 py-3 m-0">Наши мастера</h2>
 
+                    <div class="masters-description py-lg-5 py-md-3 py-3 pt-0 pt-md-0 pt-lg-0">
+                        Привет, давай знакомиться. Мы команда <span class="masters-description-decor">Afrodreads</span> !
+                        <br>Сейчас в нашей команде работают прекрасные сертифицированные мастера, которые горят своим делом и очень внимательно и трепетно относятся к своему труду.
+                        <br>Для нас  очень важны качество и индивидуальный подход к каждому гостю, поэтому именно такое  отношение лежит в основе нашего взаимодействия с клиентами (начиная с момента консультации и заканчивая итоговой встречей с мастером).
+                        <br>Мы сечём в качественном преображении людей и в хорошем настроении! 
+                        <br>Приходи и убедись сам(а)!
+                    </div>
 
                     <div id="masters_carousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-
                             <div class="carousel-item active">
                                 <div class="master-box">
                                     <div class="d-none d-md-block  master-decoration-box master-decoration-box-gray">
@@ -356,8 +332,8 @@
                                             <p class="master-title">Мастер Мария</p>
                                             <p class="master-subtitle">Опыт работы: 12 лет</p>
                                         </div>
-                                        <p class="d-none d-md-block master-description">Привет, давай знакомиться! <br>
-                                            Меня зовут Мари! Я являюсь основателем, руководителем, а так же топ-мастером
+                                        <p class="d-none d-md-block master-description">
+                                            Меня зовут Мари! <br>Я являюсь основателем, руководителем, а так же топ-мастером
                                             нашей студии. В сфере брейдинга я нахожусь уже более 12-ти лет. Каждый день
                                             на протяжении этого времени я плету людей и знаю, как это сделать
                                             качественно, безопасно и эксклюзивно. Умею понимать и слышать клиентов, чему
@@ -370,8 +346,6 @@
                                         <img class="master-photo-img" src="/resources/images/masters-photos/2.JPG"
                                             alt="">
                                     </div>
-
-
                                 </div>
                             </div>
 
@@ -491,7 +465,6 @@
                         </div>
                     </div>
 
-
                     <div class="masters-navigation d-none d-md-block">
                         <button type="button" class="carusel_btn carusel_btn_left" data-bs-target="#masters_carousel"
                             data-bs-slide="prev"></button>
@@ -511,7 +484,6 @@
                             data-bs-slide="next"></button>
                     </div>
 
-
                 </div>
             </section>
 
@@ -528,7 +500,7 @@
                                     <img class="img-svg" src="./resources/images/markers/arrow.svg" alt="">
                                 </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-1" closed>
+                            <div class="answer pt-2 p-3 p-lg-5 pt-lg-3" data-collase-target="answer-1" closed>
                                 Важно помыть голову за 7-8 часов перед плетением (можно перед сном). Приветствуется
                                 использование пилинга для кожи головы.
                                 <br>В последнее мытьё перед сеансом кондиционеры/маски/бальзамы минимизируем либо
@@ -543,7 +515,7 @@
                                     <img class="img-svg" src="./resources/images/markers/arrow.svg" alt="">
                                 </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-2" closed>
+                            <div class="answer pt-2 p-3 p-lg-5 pt-lg-3" data-collase-target="answer-2" closed>
                                 Важно помыть голову за 7-8 часов перед плетением (можно перед сном). Приветствуется
                                 использование пилинга для кожи головы.
                                 <br>Маски/кондиционеры/бальзамы исключаем во время последнего мытья!
@@ -557,7 +529,7 @@
                                     <img class="img-svg" src="./resources/images/markers/arrow.svg" alt="">
                                 </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-3" closed>
+                            <div class="answer pt-2 p-3 p-lg-5 pt-lg-3" data-collase-target="answer-3" closed>
                                 Противопоказания к плетению могут быть следующие:
                                 <br>-свежие незажившие раны на коже головы;
                                 <br>-педикулез (вши);
@@ -576,7 +548,7 @@
                                     <img class="img-svg" src="./resources/images/markers/arrow.svg" alt="">
                                 </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-4" closed>
+                            <div class="answer pt-2 p-3 p-lg-5 pt-lg-3" data-collase-target="answer-4" closed>
                                 Осветлённые сухие концы, химия, бустап, ботокс, хна.
                                 <br>Этой категории людей мы рекомендуем расплетаться непосредственно у мастера, так как
                                 волосы могут быть подвержены бОльшей ломкости и, при самостоятельном, расплетание
@@ -594,7 +566,7 @@
                                     <img class="img-svg" src="./resources/images/markers/arrow.svg" alt="">
                                 </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-5" closed>
+                            <div class="answer pt-2 p-3 p-lg-5 pt-lg-3" data-collase-target="answer-5" closed>
                                 Первые 3-5 дней являются адаптационным периодом после заплетения. Зуд, тяжесть и
                                 стянутые ощущения являются нормой в этот промежуток времени. Не рекомендуется честь
                                 голову грязными руками, делать тугие и высокие причёски в этот период. Для
@@ -610,7 +582,7 @@
                                     <img class="img-svg" src="./resources/images/markers/arrow.svg" alt="">
                                 </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-6" closed>
+                            <div class="answer pt-2 p-3 p-lg-5 pt-lg-3" data-collase-target="answer-6" closed>
                                 Мыть голову рекомендуется раз в 7-10 дней (можно чаще или реже по мере
                                 комфортности).
                                 <br>*При более частом мытье причёска будет быстрее терять свой исходный вид.
@@ -631,7 +603,7 @@
                                     <img class="img-svg" src="./resources/images/markers/arrow.svg" alt="">
                                 </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-7" closed>
+                            <div class="answer pt-2 p-3 p-lg-5 pt-lg-3" data-collase-target="answer-7" closed>
                                 Несложные причёски, типо брейдов можно расплести без труда самим. Более сложные,
                                 такие как, де дреды, каркасные плетения, афрозатылки, в первый раз мы рекомендуем
                                 расплетать в студии. Наши мастера покажут, в какой последовательности это лучше
@@ -646,7 +618,7 @@
                                     <img class="img-svg" src="./resources/images/markers/arrow.svg" alt="">
                                 </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-8" closed>
+                            <div class="answer pt-2 p-3 p-lg-5 pt-lg-3" data-collase-target="answer-8" closed>
                                 Афрозатылок- это частичное плетение.
                                 <br>Отделяем его от незаплетенной части волос и волосистую зону моем в душе, закидывая
                                 голову вниз и используя привычные моющие средства. Сам затылок можно мыть раз в 7-10
@@ -665,7 +637,7 @@
                                     <img class="img-svg" src="./resources/images/markers/arrow.svg" alt="">
                                 </div>
                             </a>
-                            <div class="answer pt-0 p-3 p-lg-5" data-collase-target="answer-9" closed>
+                            <div class="answer pt-2 p-3 p-lg-5 pt-lg-3" data-collase-target="answer-9" closed>
                                 В случае, если у вас имеются противопоказания и вы не сообщили о них ранее.
                                 <br>Запрещено приходить на сеанс в состоянии алкогольного или наркотического опьянения.
                                 <br>При опоздании на сеанс более чем на 20 минут запись так же может быть отменена, если
@@ -679,7 +651,7 @@
             <section id="contacts" class="contacts">
                 <div class="container-xl py-2 py-md-5">
                     <h2 class="main-title py-md-3 py-2 m-0">Наши контакты</h2>
-                    <div class="contacts-description py-lg-5 py-md-3 py-2">
+                    <div class="contacts-description py-lg-5 py-md-3 py-3">
                         Наша студия брейдинга находится в Москве в 5 минутах от м. Марьина роща.
                         Мы сделали все для комфортного времяпрепровождения наших гостей.
                         Стремимся не только к качественной работе наших мастеров, но и к хорошему сервису.
@@ -688,12 +660,12 @@
                         <img class="w-100 img-fluid p-0" src="/resources/images/contacts-photos/studio-photo.jpg" alt="">
                     </div>
 
-                    <div class="row justify-content-between my-2 my-md-5">
+                    <div class="row justify-content-between my-3 my-md-5">
                         <div class="col-md-4 col-12">
                             <div class="mb-3 contact">
                                 <div class="contact-name">Телефон:</div>
-                                <a href="tel:+79917067186" class="contact-data d-flex flex-row align-items-center">
-                                    <span class="phone-icon-box">
+                                <a href="tel:+79917067186" class="contact-data network-icon d-flex flex-row align-items-center">
+                                    <span class="phone-icon-box phone-icon-box-dark d-flex justify-content-between align-items-center">
                                         <img class="img-fluid img-svg" src="/resources/images/social-networks/phone-img.svg" alt="">
                                     </span>
                                     <span>7&nbsp(991)&nbsp706&nbsp71&nbsp86</span>
@@ -706,21 +678,26 @@
                             <div class="mb-3 contact">
                                 <div class="contact-name">Социальные сети:</div>
                                 <div class="social-networks social-networks-dark d-flex flex-row">
-                                    <a href="https://vk.com/afrodreadsmsk" class="network-icon d-block">
-                                        <img class="img-fluid img-svg" src="/resources/images/social-networks/vk.svg"
-                                            alt="">
+                                    <a href="https://vk.com/afrodreadsmsk" target="_blank" class="network-icon d-flex flex-column align-items-center justify-content-center">
+                                        <div class="contact-img-box-vk">
+                                            <img class="img-fluid img-svg w-100 h-auto" src="/resources/images/social-networks/vk.svg"
+                                                alt="">
+                                        </div>
                                     </a>
-                                    <a href="https://t.me/afrodreadsmsk" class="network-icon d-block">
-                                        <img class="img-fluid img-svg"
-                                            src="/resources/images/social-networks/telegram.svg" alt="">
+                                    <a href="https://t.me/afrodreadsmsk" target="_blank" class="network-icon d-flex flex-column align-items-center justify-content-center">
+                                        <div class="contact-img-box-tg">
+                                            <img class="img-fluid img-svg w-100 h-auto" src="/resources/images/social-networks/telegram.svg" alt="">
+                                        </div>
                                     </a>
-                                    <a href="https://wa.me/79917067186" class="network-icon d-block">
-                                        <img class="img-fluid img-svg"
-                                            src="/resources/images/social-networks/whatsapp.svg" alt="">
+                                    <a href="https://wa.me/79917067186" target="_blank" class="network-icon d-flex flex-column align-items-center justify-content-center">
+                                        <div class="contact-img-box-wa">
+                                            <img class="img-fluid img-svg w-100 h-auto" src="/resources/images/social-networks/whatsapp.svg" alt="">
+                                        </div>
                                     </a>
-                                    <a href="https://instagram.com/afrodreads?igshid=YmMyMTA2M2Y=" class="network-icon d-block">
-                                        <img class="img-fluid img-svg"
-                                            src="./resources/images/social-networks/instagram.svg" alt="">
+                                    <a href="https://instagram.com/afrodreads?igshid=YmMyMTA2M2Y=" target="_blank" class="network-icon d-flex flex-column align-items-center justify-content-center">
+                                        <div class="contact-img-box-inst">
+                                            <img class="img-fluid img-svg w-100 h-auto" src="./resources/images/social-networks/instagram.svg" alt="">
+                                        </div>
                                     </a>
                                 </div>
                             </div>
@@ -732,66 +709,62 @@
                     </div>
                 </div>
 
-
-
-
             </section>
-
-
         </main>
 
         <footer class="footer py-3 py-md-5">
             <div class="container-xl">
-
                 <div class="footer-content d-flex row  justify-content-between">
-                    <div
-                        class="footer-contacts text-center text-md-start col-12 col-md-4 row justify-content-between flex-column">
-                        <div
-                            class="social-networks social-networks-white mb-2 d-flex justify-content-center justify-content-md-start">
-                            <a href="https://vk.com/afrodreadsmsk" class="footer-network-icon network-icon"><img class="img-svg"
-                                    src="/resources/images/social-networks/vk.svg" alt=""></a>
-                            <a href="https://t.me/afrodreadsmsk" class="footer-network-icon network-icon"><img class="img-svg"
-                                    src="/resources/images/social-networks/telegram.svg" alt=""></a>
-                            <a href="https://wa.me/79917067186" class="footer-network-icon network-icon"><img class="img-svg"
-                                    src="/resources/images/social-networks/whatsapp.svg" alt=""></a>
-                            <a href="https://instagram.com/afrodreads?igshid=YmMyMTA2M2Y=" class="footer-network-icon network-icon"><img class="img-svg"
-                                    src="./resources/images/social-networks/instagram.svg" alt=""></a>
+                    <div class="footer-contacts text-center text-md-start col-12 col-md-4 row justify-content-between flex-column">
+                        <div class="social-networks social-networks-white mb-2 d-flex justify-content-center justify-content-md-start">
+
+                            <a href="https://vk.com/afrodreadsmsk" target="_blank" class="footer-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
+                                <div class="footer-img-box-vk">
+                                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/vk.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="https://t.me/afrodreadsmsk" target="_blank" class="footer-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
+                                <div class="footer-img-box-tg">
+                                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/telegram.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="https://wa.me/79917067186" target="_blank" class="footer-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
+                                <div class="footer-img-box-wa">
+                                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/whatsapp.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="https://instagram.com/afrodreads?igshid=YmMyMTA2M2Y=" target="_blank" class="footer-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
+                                <div class="footer-img-box-inst">
+                                    <img class="img-svg w-100 h-auto" src="./resources/images/social-networks/instagram.svg" alt="">
+                                </div>
+                            </a>
                         </div>
 
-                        <!-- <div class="mb-2"> -->
-                            <a class="footer-phone d-flex justify-content-center justify-content-md-start mb-2" href="tel:+79917067186">
-                                <span class="phone-icon-box">
+                        <div class="mb-2 d-flex justify-content-center justify-content-md-start">
+                            <a class="footer-phone d-flex align-items-center " href="tel:+79917067186">
+                                <span class="phone-icon-box phone-icon-box-footer d-flex flex-column justify-content-between align-items-center">
                                     <img class="img-fluid img-svg" src="/resources/images/social-networks/phone-img.svg" alt="">
                                 </span>
                                 <span>7&nbsp(991)&nbsp706&nbsp71&nbsp86</span>
                             </a>
-                        <!-- </div> -->
 
+                        </div>
 
-                        <!-- <a class="header-phone d-flex mr-5" href="tel:+79774904101">
-                            <span class="phone-icon-box">
-                                <img class="img-svg" src="/resources/images/phone-img.svg" alt="">
-                            </span>
-                            <span class="phone-link">7&nbsp(977)&nbsp490&nbsp41&nbsp01</span>
-                        </a> -->
-
-
-                    <div class="mb-2">
-                        <a href="#contacts" class="footer-geolocation">
-                            <div>г. Москва ул. Сущевский вал 43</div>
-                        </a>
+                        <div class="mb-2">
+                            <a href="#contacts" class="footer-geolocation">
+                                <div>г. Москва ул. Сущевский вал 43</div>
+                            </a>
+                        </div>
                     </div>
 
+                    <div class="footer-logo text-center col-12 col-md-4 d-flex flex-column align-items-center justify-content-center">
+                        <span class="logo logo-small">
+                            Afrodreads
+                        </span>
                     </div>
-                    <div class="footer-logo text-center col-12 col-md-4">
-                        <a class="logo">
-                            <span class="logo logo-small">
-                                Afrodreads
-                            </span>
-                        </a>
-                    </div>
+
                     <div class="footer-navigation d-none d-md-flex col-md-4  justify-content-between">
-                        <div class="col-6">
+                        <div class="col-6 ">
                             <div class="d-flex flex-column align-items-center">
                                 <a href="#cover" class="footer-section-link">Главная</a>
                             </div>
@@ -813,26 +786,26 @@
                     </div>
 
                 </div>
-
             </div>
         </footer>
 
 
 
-        <div class="fixed-links d-flex flex-column d-md-none">
-            <a href="https://wa.me/79917067186" class="fixed-link fixed-whatsapp-link d-flex flex-column align-items-center justify-content-center ">
-                <div class="fixed-img-box">
-                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/fixed-whatsapp.svg" alt="">
+        <div class="fixed-links d-flex flex-column d-md-none  social-networks-white">
+            <a href="https://wa.me/79917067186" target="_blank" class="network-icon-fixed-pink fixed-link fixed-whatsapp-link d-flex flex-column align-items-center justify-content-center ">
+                <div class="fixed-img-box-wa">
+                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/whatsapp.svg" alt="">
                 </div> 
-                    
             </a>
-            <a href="https://t.me/afrodreadsmsk" class="fixed-link fixed-tg-link d-flex flex-column align-items-center justify-content-center">
-                <div class="fixed-img-box">
-                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/fixed-tg.svg" alt="">
+
+            <a href="https://t.me/afrodreadsmsk" target="_blank" class="network-icon-fixed-pink fixed-link fixed-tg-link d-flex flex-column align-items-center justify-content-center">
+                <div class="fixed-img-box-tg">
+                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/telegram.svg" alt="">
                 </div>
             </a>
-            <a href="#header" class="fixed-link fixed-up-link d-flex flex-column align-items-center justify-content-center">
-                <div class="fixed-img-box">
+
+            <a href="#header" class="network-icon-fixed-gray fixed-link fixed-up-link d-flex flex-column align-items-center justify-content-center">
+                <div class="fixed-img-box-up">
                     <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/fixed-up.svg" alt="">
                 </div> 
             </a>    
