@@ -58,7 +58,11 @@ $(document).ready(function ($) {
             closeModel('modal-window-form');
             SetValidationStatus("name", {isValid:true, message:"" })
             SetValidationStatus("phone-number", {isValid:true, message:"" })
-        })
+        });
+
+
+    $('.burger-menu-elem-js').click(changeBurgerMenuState); 
+
     $('.btn-open-modal-window').click(() => openModel('modal-window-form'));
 
     $('.show-more-link').click(showMore)

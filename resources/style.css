@@ -4,8 +4,6 @@
     src: url(/resources/fonts/TTF/BeautifulBloom-Regular.ttf); /* Путь к файлу со шрифтом */
 }
 
-
-
 html, 
 body {
     padding: 0;
@@ -37,6 +35,10 @@ a[type="button"] {
     width: 100%;
     padding-bottom: 121%;
     overflow: hidden;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
 }
 
 .img-svg {
@@ -61,6 +63,32 @@ a[type="button"] {
     text-decoration: none;
 }
 
+.main-title {
+    text-align: center;
+    font-size: 24px;
+}
+
+@media (min-width: 576px) {
+    .main-title {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-title {
+        font-size: 40px;
+    }
+}
+
+#menu.hidden {
+    width: 0px;
+    visibility:hidden;
+}
+/*Общие стили (конец)*/
+
+
+
+/* Loader (начало) */
 .loader {
     position: fixed;
     background: black;
@@ -97,7 +125,6 @@ a[type="button"] {
     animation-duration: 2s;
     animation-name: loadertext;
     animation-iteration-count: infinite;
-
 }
 
 .loader-visual{
@@ -131,29 +158,7 @@ a[type="button"] {
     75% { top: calc(100% - 25px); left: 0;}
     100% { top: 0; left: 0;}
 }
-
-.main-title {
-    text-align: center;
-    font-size: 24px;
-}
-
-@media (min-width: 576px) {
-    .main-title {
-        font-size: 32px;
-    }
-}
-
-@media (min-width: 992px) {
-    .main-title {
-        font-size: 40px;
-    }
-}
-
-#menu.hidden {
-    width: 0px;
-    visibility:hidden;
-}
-/*Общие стили (конец)*/
+/* Loader (конец)*/
 
 
 
@@ -311,7 +316,6 @@ form input {
     box-shadow: inset 4px 4px 6px #0000003f;
 }
 
-
 .modal-window-name,
 .modal-window-number {
     color: #EC1616;
@@ -320,7 +324,6 @@ form input {
     margin-bottom: 1em;
     display: block;
     height: 12px;
-
 }
 
 @media (min-width: 576px) {
@@ -329,7 +332,7 @@ form input {
         font-size: 14px;
         margin-bottom: 1em;
         height: 14px;
-}
+    }
 }
 
 @media (min-width: 992px) {
@@ -338,9 +341,7 @@ form input {
         font-size: 16px;
         height: 16px;
     }       
-
 }
-
 
 .header-answer {
     font-family: 'Comfortaa';
@@ -389,7 +390,6 @@ form input {
     cursor: pointer;
 }
 
-
 @media (min-width: 576px) {
     .close   {
         width: 20px;
@@ -415,7 +415,6 @@ form input {
 @media (min-width:768px) {
     .header {
         position: fixed;
-        /* background-color: #383838e8; */
         width: 100%;
         z-index: 3000;
     }
@@ -447,7 +446,6 @@ form input {
         font-size: 12px;
         letter-spacing: 5%;
         transition: color 0.2s linear;
-
     }
 
     .header-navigation a:hover { 
@@ -461,13 +459,9 @@ form input {
     }
 }
 
-.phone-link
-/* .header-navigation a */
- {
+.phone-link {
     transition: color 0.2s linear;
 }
-
-
 
 .phone-icon-box .icon-phone-color,
 .contact-data .icon-phone-color-dark{
@@ -526,8 +520,7 @@ form input {
     justify-content: start;
 }
 
-.burger-menu-container[closed] .header-burger
-{
+.burger-menu-container[closed] .header-burger {
     margin: 0;
 }
 
@@ -558,8 +551,7 @@ form input {
     background-color: #FFFFFF;
 }
 
-.burger-menu-container
-{
+.burger-menu-container {
     position: fixed;
     height: 100%;
     width: 70%;
@@ -581,7 +573,7 @@ form input {
     }
 }
  
-.burger-menu-container[closed]{
+.burger-menu-container[closed] {
     position: unset;
     height: auto;
     width: auto;
@@ -591,7 +583,7 @@ form input {
     z-index: none;
 }
 
-.burger-menu-container[closed] .header-navigation{
+.burger-menu-container[closed] .header-navigation {
     display: none;
 }
 
@@ -620,6 +612,18 @@ form input {
     align-items: center;
 }
 
+.header-phone .phone-icon-box {
+    width: 18px ;
+    height:20px ;
+}
+
+@media (min-width: 992px) {
+    .header-phone .phone-icon-box {
+        width: 14px ;
+        height:16px ;
+    }
+}
+
 .phone-link {
     display: none;
 }
@@ -630,7 +634,6 @@ form input {
     }
 }
 
-
 .header-phone-icon{
     width: 14px;
     height: 17px;
@@ -638,17 +641,6 @@ form input {
     justify-content: center;
     align-items: center;
 }
-/* 
-.header-phone:hover {
-    color: #F31F9F;
-}
-
-.header-navigation a:active,
-.header-phone:active {
-    color: #CB0E7F;
-} */
-
-
 
 .header-network-icon {
     margin: 0em 1em;
@@ -663,10 +655,25 @@ form input {
     }
 }
 
+.header-img-box-vk {
+    width: 25px;
+    height: 23px;
+}
+
+.header-img-box-tg {
+    width: 25px;
+    height: 21px;
+}
+
+.header-img-box-wa,
+.header-img-box-inst {
+    width: 25px;
+    height: 25px;
+}
+
 .header-burger {
     order: 1;
 }
-
 
 .header-phone {
     order: 3;
@@ -675,7 +682,6 @@ form input {
 .social-networks {
     order:2;
 }
-
 
 @media (min-width: 768px) {
     .header-navigation {
@@ -695,7 +701,6 @@ form input {
     }
 }
 
-
 @media (min-width: 992px) {
     .header-navigation {
         order: 1;
@@ -713,8 +718,6 @@ form input {
         order:4;
     }
 }
-
-
 /*Header (конец)*/
 
 
@@ -797,7 +800,6 @@ form input {
     width: 300px;
     height: 44px;
     transition: background-color 0.2s linear;
-   
 }
 
 .cover-btn:hover {
@@ -805,6 +807,7 @@ form input {
     background-color: #FFFFFF;
     border: none;
 }
+
 .cover-btn:active {
     box-shadow: inset 4px 4px 6px #0000003f;
 }
@@ -832,29 +835,26 @@ form input {
 /*Hello (начало)*/
 .hello {
     text-align: center;
-    font-size: 24px;
     font-family: 'Comfortaa', cursive;
-    line-height: 30px;
     color: #383838;
-    padding: 5em 0;
+    font-size: 13px;
+    padding: 3em 0;
+    line-height: 1.8em; 
 }
 
-@media (max-width: 992px) {
+@media (min-width: 576px) {
     .hello {
         font-size: 16px;
         padding: 4em 0;
     }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 992px) {
     .hello {
-        padding: 3em 0;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 24px;
+        padding: 5em 0;
     }
 }
-
-
 /*Hello (конец)*/
 
 
@@ -880,32 +880,15 @@ form input {
     transition: background-color 0.2s linear;
 }
 
-@media (min-width: 576px) {
-    .service-content {
-        /* min-height: ; */
-    }
-}
-
 .service-content:hover {
     background-color: #ffffff;
     color: #383838;
-
-}
-
-.service-text{
-   
-}
-
-
-.service-text:active {
-
 }
 
 .services-name,
 .services-price {
     font-family: 'Roboto Condensed';
     font-weight: 400;
-    /* color: #FFFFFF; */
 }
 
 .services-name:hover,
@@ -925,9 +908,7 @@ form input {
     font-size: 24px;
 }
 
-
 @media (min-width: 992px) {
-    
     .services-name {
         font-size: 24px;
     }
@@ -944,7 +925,6 @@ form input {
     color: #FFFFFF;
     transition: color 0.1s linear;
     text-transform: uppercase;
-    /* letter-spacing: 0.1em; */
 }
 
 .show-more-link:hover {
@@ -962,6 +942,32 @@ form input {
 /*Masters (начало)*/
 .masters {
     text-align: center;
+}
+
+.masters-description {
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    font-size: 13px;
+    text-align: center;
+    color: #383838;
+    line-height: 1.6em;
+}
+
+@media (min-width: 576px) {
+    .masters-description {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 992px) {
+    .masters-description {
+        font-size: 24px;
+    }
+}
+
+.masters-description-decor {
+    color: #CB0E7F;
+    text-transform: uppercase;
 }
 
 .carusel_btn {
@@ -995,7 +1001,6 @@ form input {
 }
 
 .master-box {
-    /* height: 100vh; */
     display: grid;
 }
 
@@ -1015,7 +1020,6 @@ form input {
     grid-row-end: 3;
     z-index: 5;
     background-color: #000000d8;
-
 }
 
 @media (min-width: 768px) {
@@ -1048,6 +1052,7 @@ form input {
     .master-decoration-box-gray {
         z-index: 1;
     }
+
     .master-decoration-box-black {
         z-index: 2;
     }
@@ -1156,7 +1161,6 @@ form input {
     border: 3px solid #000000;
 }
 
-
 .master-btn-box {
     display: flex;
     flex-direction: column;
@@ -1173,14 +1177,11 @@ form input {
 
 .master-btn {
     padding: 1.3em 1.5em;
-    /* width: 161px; */
-    /* height: 28px; */
     font-family: 'Montserrat';
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     border: 3px solid #CB0E7F;
     border-radius: 10px;
     font-weight: 600;
@@ -1193,16 +1194,12 @@ form input {
 
 @media (min-width: 576px) {
     .master-btn  {
-        /* width: 250px; */
-        /* height: 60px; */
         font-size: 18px;
     }
 }
 
 @media (min-width: 992px) {
     .master-btn  {
-        /* width: 350px; */
-        /* height: 60px; */
         font-size: 24px;
     }
 }
@@ -1217,14 +1214,11 @@ form input {
     color: #ffffff;
     box-shadow: inset 4px 4px 6px #0000003f;
 }
-
-
 /*Masters (коенц)*/
 
 
 
 /*Care (начало)*/
-
 .care h2 {
     color: #383838;
     font-family: 'Montserrat';
@@ -1236,7 +1230,7 @@ form input {
     border: 1px solid #383838;
     border-radius: 3px;
     margin-bottom: 0.5em;
-    min-height: 63px;
+    min-height: 68px;
 }
 
 @media (min-width: 576px) {
@@ -1247,7 +1241,7 @@ form input {
 } 
 
 .care-question a  {
-    height: 63px;
+    height: 68px;
     transition: background-color 0.2s linear;
 }
 
@@ -1300,7 +1294,6 @@ form input {
     height: 20px;
     min-width: 20px;
     min-height: 20px;
-    /* max-height: 25px; */
     margin-left: 0.2em;
     transition-duration: 0.2s;
     transition-property: transform;
@@ -1319,7 +1312,6 @@ form input {
         height: 37px;
         min-width: unset;
         min-height: unset;
-        /* max-height: 25px; */
         margin-left: unset;
     }
 }
@@ -1329,7 +1321,6 @@ form input {
     font-size: 13px;
     line-height: 1.8em;
     margin-left: 1em;
-    /* text-indent: 2em;  */
 }
 
 @media (min-width: 576px) {
@@ -1337,11 +1328,11 @@ form input {
         font-size: 16px;
     }
 }
+
 @media (min-width: 992px) {
     .answer {
         font-size: 22px;
     }
-  
 }
 
 .answer[closed] {
@@ -1351,8 +1342,6 @@ form input {
 .question-marker[closed]{
     transform: rotate(180deg);
 }
-
-
 /*Care (конец)*/
 
 
@@ -1367,9 +1356,10 @@ form input {
 .contacts-description {
     font-family: 'Comfortaa';
     font-weight: 700;
-    font-size: 12px;
+    font-size: 13px;
     text-align: center;
     color: #383838;
+    line-height: 1.6em;
 }
 
 @media (min-width: 576px) {
@@ -1389,14 +1379,56 @@ form input {
     margin-right: 0.5em;
 }
 
+.contact-img-box-vk {
+    width: 25px;
+    height: 23px;
+}
+
+.contact-img-box-tg {
+    width: 25px;
+    height: 21px;
+}
+
+.contact-img-box-wa,
+.contact-img-box-inst {
+    width: 25px;
+    height: 25px;
+}
+
 @media (min-width: 576px) {
     .social-networks-dark .network-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .contact-img-box-vk {
+        width: 40px;
+        height: 38px;
+    }
+    .contact-img-box-tg {
+        width: 40px;
+        height: 34px;
+    }
+    .contact-img-box-wa,
+    .contact-img-box-inst {
         width: 40px;
         height: 40px;
     }
 }
 @media (min-width: 992px) {
     .social-networks-dark .network-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .contact-img-box-vk {
+        width: 50px;
+        height: 47px;
+    }
+    .contact-img-box-tg {
+        width: 50px;
+        height: 42px;
+    }
+    .contact-img-box-wa,
+    .contact-img-box-inst {
         width: 50px;
         height: 50px;
     }
@@ -1420,7 +1452,6 @@ form input {
 .phone-icon-box {
     display: block;
     width: 14px;
-    /* height: 14px; */
     margin-right: 0.2em;
 }
 
@@ -1430,6 +1461,7 @@ form input {
         height: 16px;
     }
 }
+
 @media (min-width: 992px) {
     .phone-icon-box {
         width: 18px;
@@ -1449,14 +1481,13 @@ form input {
     .contact {
         display: inline-block;
         font-size: 20px;
-
     }
 }
+
 @media (min-width: 992px) {
     .contact {
         display:block;
         font-size: 24px;
-
     }
 }
 
@@ -1475,6 +1506,24 @@ form input {
     color: #383838;
 }
 
+.phone-icon-box-dark {
+    width: 10px;
+    height: 10px;
+}
+
+@media (min-width: 576px) {
+    .phone-icon-box-dark {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .phone-icon-box-dark {
+        width: 18px;
+        height: 18px;
+    }
+}
 
 .contact-data:hover{
     color: #F31F9F;
@@ -1484,20 +1533,20 @@ form input {
     color: #CB0E7F;
 }
 
-
-.social-networks-dark .icon-network-color {
+.social-networks-dark .icon-network-color,
+.phone-icon-box-dark .icon-phone-color {
     fill: #383838;
 }
 
-.social-networks-dark .network-icon:hover .icon-network-color {
+.social-networks-dark .network-icon:hover .icon-network-color,
+.network-icon:hover .phone-icon-box-dark .icon-phone-color  {
     fill: #F31F9F;
 }
 
-.social-networks-dark .network-icon:active .icon-network-color {
+.social-networks-dark .network-icon:active .icon-network-color,
+.network-icon:active .phone-icon-box-dark .icon-phone-color {
     fill: #CB0E7F;
 }
-
-
 /*Contacts (конец)*/
 
 
@@ -1521,13 +1570,28 @@ form input {
     height: 20px;
 }
 
+.footer-img-box-tg {
+    width: 20px;
+    height: 17px;
+}
+
+.footer-img-box-vk {
+    width: 20px;
+    height: 19px;
+}
+
+.footer-img-box-wa,
+.footer-img-box-inst {
+    width: 20px;
+    height: 20px;
+}
+
 @media (min-width: 576px) {
     .footer-network-icon {
         margin: 0;
         margin-right: 0.5em;
     }
 }
-
 
 .footer-geolocation {
     color: #ffffff;
@@ -1545,7 +1609,7 @@ form input {
 .footer-section-link {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    /* text-align: right; */
+    margin-bottom: 0.5em;
 }
 
 .footer-section-link,
@@ -1562,6 +1626,11 @@ form input {
 
 .footer-navigation {
     box-sizing: content-box;
+}
+
+.phone-icon-box-footer {
+    width: 12px;
+    height: 14px;
 }
 
 .footer-logo {
@@ -1589,6 +1658,8 @@ form input {
 /*Footer (конец)*/
 
 
+
+/*Fixed links (начало)*/
 .fixed-links {
     position: fixed;
     bottom: 0;
@@ -1609,27 +1680,52 @@ form input {
 .fixed-whatsapp-link,
 .fixed-tg-link {
     background-color: #CB0E7F;
-
 }
 
 .fixed-up-link {
     background-color: #505050;
-
 }
 
-/* @media (min-width: 576px) {
-
-    
-    .fixed-links {
-        margin-right: 1em;
-        margin-bottom: 1em;
-    }
-}
-@media (min-width: 992px) {
-
-} */
-
-.fixed-img-box {
+.fixed-img-box-wa {
     width: 35px;
     height: 35px;
 }
+
+.fixed-img-box-tg {
+    width: 33px;
+    height: 30px;
+}
+
+.fixed-img-box-up {
+    width: 35px;
+    height: 23px;
+}
+
+.social-networks-white .network-icon-fixed-pink:hover .icon-network-color,
+.social-networks-white .network-icon-fixed-pink:active .icon-network-color {
+    fill: #F31F9F;
+}
+
+.social-networks-white .network-icon-fixed-gray:hover .icon-network-color,
+.social-networks-white .network-icon-fixed-gray:active .icon-network-color {
+    fill: #505050;
+}
+
+.fixed-whatsapp-link,
+.fixed-tg-link,
+.fixed-up-link {
+    transition: background-color 0.2s linear;
+}
+
+.fixed-whatsapp-link:hover,
+.fixed-tg-link:hover,
+.fixed-up-link:hover,
+.fixed-whatsapp-link:active,
+.fixed-tg-link:active,
+.fixed-up-link:active 
+{
+    background-color: #FFFFFF;
+}
+
+
+/*Fixed links (конец)*/
