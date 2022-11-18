@@ -60,6 +60,9 @@ $(document).ready(function ($) {
             SetValidationStatus("phone-number", {isValid:true, message:"" })
         });
 
+    $('#close-modal-window-answer').click(() => {
+        closeModel('modal-window-answer')
+    })
 
     $('.burger-menu-elem-js').click(changeBurgerMenuState); 
 
@@ -159,7 +162,8 @@ function submitHandler(event) {
 
         axios.post('/send-user-request.php', bodyFormData)
             .then(function (response) {
-                console.log(response);
+                closeModel("modal-window-form")
+                openModel("modal-window-answer")
             })
             .catch(function (error) {
                 alert("Упс произошла ошибка")
