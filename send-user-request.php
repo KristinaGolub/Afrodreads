@@ -1,9 +1,9 @@
 <?php
     $phone = $_POST["phone-number"];
-    $name = $_POST["name"];
+    $name = urldecode($_POST["name"]);
 
     $phonePattern = "/^\+7\s\(\d{3}\)\s\d{3}\s\d{4}$/";
-    $namePattern = "/^[A-zА-я0-9]{3,32}$/";
+    $namePattern = "/^[A-zЁА-ёя0-9\s]{3,32}$/u";
     if(!preg_match($phonePattern, $phone))
     {
         http_response_code(500);
