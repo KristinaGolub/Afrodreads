@@ -41,6 +41,7 @@
 
     <!--Подключение собственных скриптов-->
     <script src="/resources/script.js"></script>
+    <script src="/resources/script-gallery.js"></script>
 </head>
 
 <body>
@@ -55,6 +56,11 @@
                 </div>
                 <span class="loader-text"></span>
             </div>
+        </div>
+
+        <div id="modal-window-original-photo" class="d-none">
+            <a id="close-modal-window-original-photo">x</a>
+            <div id="original-photo-box"></div>
         </div>
 
         <header class="header py-3 py-md-0" id="header">
@@ -136,31 +142,24 @@
                     </div>
 
                     <div class="gallery-content px-0">
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
- 
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
-
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
-
-                            
-
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
-                            
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
- 
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
-                            <div><a href="#"><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src="/resources/images/test/1.png"><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
                          
                     </div>
 
