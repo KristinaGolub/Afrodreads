@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afrodreads - дреды длиною в жизнь!</title>
 
-
+    <link type="image/png" sizes="128x128" rel="icon" href="/resources/images/favicon-icon.png">
 
     <meta property="og:title" content="Afrodreads - дреды длинною в жизнь" />
     <meta property="og:url" content="http://afrodreads.com/" />
@@ -58,9 +58,15 @@
             </div>
         </div>
 
-        <div id="modal-window-original-photo" class="d-none">
-            <a id="close-modal-window-original-photo">x</a>
-            <div id="original-photo-box"></div>
+        <div id="modal-window-original-photo" class="d-none modal-window-bg d-flex flex-column">
+
+            <div class="d-flex justify-content-end m-2 m-sm-3 m-lg-4">
+                <a class="close" id="close-modal-window-original-photo">
+                    <img class="img-fluid" src="/resources/images/markers/exit.svg" alt="Крестик">
+                </a>
+            </div>
+
+            <div id="original-photo-box" class="original-photo-box"></div>
         </div>
 
         <header class="header py-3 py-md-0" id="header">
@@ -73,11 +79,11 @@
                             </a>
                         </div>
                         <nav class="header-navigation d-md-flex" id="menu">
-                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="#main">Главная</a>
-                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="#services">Услуги</a>
-                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="#masters">Мастера</a>
-                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="#care">Уход</a>
-                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="#contacts">Контакты</a>
+                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="/#main">Главная</a>
+                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="/#services">Услуги</a>
+                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="/#masters">Мастера</a>
+                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="/#care">Уход</a>
+                            <a data-collapse-for="burger-menu"  class="mr-2 burger-menu-elem-js" href="/#contacts">Контакты</a>
                         </nav>
                     </div>
 
@@ -91,7 +97,7 @@
 
                     <a class="header-phone d-flex mr-5" href="tel:+79917067186">
                         <span class="phone-icon-box d-flex flex-column align-items-center">
-                            <img class="img-svg" src="/resources/images/social-networks/phone-img.svg" alt="">
+                            <img class="img-svg" src="/resources/images/social-networks/phone-img.svg" alt="Иконка телефона">
                         </span>
                         <span class="phone-link">7&nbsp(991)&nbsp706&nbsp71&nbsp86</span>
                     </a>
@@ -100,25 +106,25 @@
 
                         <a href="https://vk.com/afrodreadsmsk" target="_blank" class="header-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
                             <div class="header-img-box-vk">
-                                <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/vk.svg" alt="">
+                                <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/vk.svg" alt="Иконка Вконтакте">
                             </div>
                         </a>
 
                         <a href="https://t.me/afrodreadsmsk" target="_blank" class="header-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
                             <div class="header-img-box-tg">
-                                <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/telegram.svg" alt="">
+                                <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/telegram.svg" alt="Иконка Телеграма">
                             </div>
                         </a>
 
                         <a href="https://wa.me/79917067186" target="_blank" class="header-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
                             <div class="header-img-box-wa">
-                                <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/whatsapp.svg" alt="">
+                                <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/whatsapp.svg" alt="Иконка Вотсаппа">
                             </div>
                         </a>
 
                         <a href="https://instagram.com/afrodreads?igshid=YmMyMTA2M2Y=" target="_blank" class="header-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
                             <div class="header-img-box-inst">
-                                <img class="img-svg w-100 h-auto" src="./resources/images/social-networks/instagram.svg" alt="">
+                                <img class="img-svg w-100 h-auto" src="./resources/images/social-networks/instagram.svg" alt="Иконка Инстаграмма">
                             </div>
                         </a>
                     </div>
@@ -132,7 +138,7 @@
             <section class="gallery">
                 <div class="container-xl py-3 py-md-5 px-1">
                     <div class="mt-1 mt-sm-2 mt-md-5">
-                        <a href="#" class="go-back-main-link">&#171; на главную</a>
+                        <a href="index.html" class="go-back-main-link">&#171; на главную</a>
                     </div>
 
                     <h2 class="main-title py-md-5 py-3 pt-0 pt-md-3 m-0">Де дреды</h2>
@@ -142,7 +148,7 @@
                     </div>
 
                     <div class="gallery-content px-0">
-                            <div><a class="js-open-img-full" data-original-src="/resources/images/test/1.png"><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
+                            <div><a class="js-open-img-full" data-original-src="/resources/images/test/AVOY6510.JPG"><img class="gallery-img" src="/resources/images/test/1.png" alt=""></a></div>
                             <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/2.png" alt=""></a></div>
                             <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
                             <div><a class="js-open-img-full" data-original-src=""><img class="gallery-img" src="/resources/images/test/3.png" alt=""></a></div>
@@ -180,22 +186,22 @@
 
                             <a href="https://vk.com/afrodreadsmsk" target="_blank" class="footer-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
                                 <div class="footer-img-box-vk">
-                                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/vk.svg" alt="">
+                                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/vk.svg" alt="Иконка Вконтакте">
                                 </div>
                             </a>
                             <a href="https://t.me/afrodreadsmsk" target="_blank" class="footer-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
                                 <div class="footer-img-box-tg">
-                                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/telegram.svg" alt="">
+                                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/telegram.svg" alt="Иконка Телеграма">
                                 </div>
                             </a>
                             <a href="https://wa.me/79917067186" target="_blank" class="footer-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
                                 <div class="footer-img-box-wa">
-                                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/whatsapp.svg" alt="">
+                                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/whatsapp.svg" alt="Иконка Вотсаппа">
                                 </div>
                             </a>
                             <a href="https://instagram.com/afrodreads?igshid=YmMyMTA2M2Y=" target="_blank" class="footer-network-icon network-icon d-flex flex-column align-items-center justify-content-center">
                                 <div class="footer-img-box-inst">
-                                    <img class="img-svg w-100 h-auto" src="./resources/images/social-networks/instagram.svg" alt="">
+                                    <img class="img-svg w-100 h-auto" src="./resources/images/social-networks/instagram.svg" alt="Иконка Инстаграмма">
                                 </div>
                             </a>
                         </div>
@@ -203,7 +209,7 @@
                         <div class="mb-2 d-flex justify-content-center justify-content-md-start">
                             <a class="footer-phone d-flex align-items-center " href="tel:+79917067186">
                                 <span class="phone-icon-box phone-icon-box-footer d-flex flex-column justify-content-between align-items-center">
-                                    <img class="img-fluid img-svg" src="/resources/images/social-networks/phone-img.svg" alt="">
+                                    <img class="img-fluid img-svg" src="/resources/images/social-networks/phone-img.svg" alt="Иконка телефона">
                                 </span>
                                 <span>7&nbsp(991)&nbsp706&nbsp71&nbsp86</span>
                             </a>
@@ -228,21 +234,21 @@
                     <div class="footer-navigation d-none d-md-flex col-md-4  justify-content-between">
                         <div class="col-6 ">
                             <div class="d-flex flex-column align-items-center">
-                                <a href="#main" class="footer-section-link">Главная</a>
+                                <a href="/#main" class="footer-section-link">Главная</a>
                             </div>
                             <div class="d-flex flex-column align-items-center">
-                                <a href="#services" class="footer-section-link">Услуги</a>
+                                <a href="/#services" class="footer-section-link">Услуги</a>
                             </div>
                             <div class="d-flex flex-column align-items-center">
-                                <a href="#masters" class="footer-section-link">Мастера</a>
+                                <a href="/#masters" class="footer-section-link">Мастера</a>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="d-flex flex-column align-items-center">
-                                <a href="#care" class="footer-section-link">Уход</a>
+                                <a href="/#care" class="footer-section-link">Уход</a>
                             </div>
                             <div class="d-flex flex-column align-items-center">
-                                <a href="#contacts" class="footer-section-link">Контакты</a>
+                                <a href="/#contacts" class="footer-section-link">Контакты</a>
                             </div>
                         </div>
                     </div>
@@ -255,19 +261,19 @@
         <div class="fixed-links d-flex flex-column d-md-none  social-networks-white">
             <a href="https://wa.me/79917067186" target="_blank" class="network-icon-fixed-pink fixed-link fixed-whatsapp-link d-flex flex-column align-items-center justify-content-center ">
                 <div class="fixed-img-box-wa">
-                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/whatsapp.svg" alt="">
+                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/whatsapp.svg" alt="Иконка Вотсаппа">
                 </div> 
             </a>
 
             <a href="https://t.me/afrodreadsmsk" target="_blank" class="network-icon-fixed-pink fixed-link fixed-tg-link d-flex flex-column align-items-center justify-content-center">
                 <div class="fixed-img-box-tg">
-                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/telegram.svg" alt="">
+                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/telegram.svg" alt="Иконка Телеграма">
                 </div>
             </a>
 
             <a href="#header" class="network-icon-fixed-gray fixed-link fixed-up-link d-flex flex-column align-items-center justify-content-center">
                 <div class="fixed-img-box-up">
-                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/fixed-up.svg" alt="">
+                    <img class="img-svg w-100 h-auto" src="/resources/images/social-networks/fixed-up.svg" alt="Стрелочка вверх">
                 </div> 
             </a>    
         </div>
