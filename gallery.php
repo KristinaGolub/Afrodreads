@@ -50,7 +50,7 @@
             exit();
     }
     $contentpath = "resources/images/gallery/$path";
-    $dirs = scandir($contentpath)
+    $dirs = array_slice(scandir($contentpath), 2)
 ?>
 
 <!DOCTYPE html>
@@ -196,10 +196,10 @@
                         <a href="index.html" class="go-back-main-link">&#171; на главную</a>
                     </div>
 
-                    <h2 class="main-title py-md-5 py-3 pt-0 pt-md-3 m-0">Де дреды</h2>
+                    <h2 class="main-title py-md-5 py-3 pt-0 pt-md-3 m-0"><?= $title; ?></h2>
 
                     <div class="gallery-description">
-
+                        <?= $text; ?>
                     </div>
 
                     <div class="gallery-content px-0">
