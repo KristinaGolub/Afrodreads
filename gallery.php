@@ -113,9 +113,9 @@
             </div>
         </div>
 
-        <div id="modal-window-original-photo" class="d-none modal-window-bg d-flex flex-column">
+        <div id="modal-window-original-photo" class="d-none modal-gallery-window-bg">
 
-            <div class="d-flex justify-content-end m-2 m-sm-3 m-lg-4">
+            <div class="close-gallery-box m-2 m-sm-3 m-lg-4">
                 <a class="close" id="close-modal-window-original-photo">
                     <img class="img-fluid" src="/resources/images/markers/exit.svg" alt="Крестик">
                 </a>
