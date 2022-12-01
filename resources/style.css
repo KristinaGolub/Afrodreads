@@ -1861,4 +1861,13 @@ form input {
     right: 0;
 }
 
+.gallery-description {
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    font-size: 13px;
+    text-align: center;
+    color: #383838;
+    line-height: 1.6em;
+}
+
 /*Gallery (конец)*/
