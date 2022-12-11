@@ -1,5 +1,6 @@
 function setImageByIndex(index)
 {
+    index = Number(index);
     let elem = $(`.gallery-content .js-open-img-full[data-index=${index}]`);
     let gallerySize = $(`.gallery-content .js-open-img-full`).length;
     console.log(gallerySize);
@@ -27,6 +28,12 @@ $(document).ready(function ($) {
         $(this).click(function() { setImageByIndex(index) })
     })
 
-    $("#modal-window-original-photo .arrow-left").click(function() {setImageByIndex($(this).attr("dataindex"))});
-    $("#modal-window-original-photo .arrow-rght").click(function() {setImageByIndex($(this).attr("dataindex"))});
+    $("#modal-window-original-photo .arrow-left").click(function() {
+        $("#original-photo-box").empty();
+        setImageByIndex($(this).attr("data-index"))
+    });
+    $("#modal-window-original-photo .arrow-right").click(function() {
+        $("#original-photo-box").empty();
+        setImageByIndex($(this).attr("data-index"))
+    });
 });

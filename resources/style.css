@@ -1885,4 +1885,38 @@ form input {
     }
 }
 
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    top: 40%;
+    height: 80px;
+    width: 35px;
+}
+
+@media (min-width: 576px) {
+    .arrow-left,
+    .arrow-right {
+        height: 150px;
+        width: 45px;
+    }
+}
+
+@media (min-width: 992px) {
+    .arrow-left,
+    .arrow-right {
+        height: 190px;
+        width: 85px;
+    }
+}
+
+
+
 /*Gallery (конец)*/
